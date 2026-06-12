@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --color-bg: #16202b;
+  --color-surface: #1b2735;
+  --color-surface-soft: #223142;
+  --color-text: #f8fafc;
+  --color-muted: #b0bccd;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-accent: #06b6d4;
+  --color-accent-soft: rgba(6, 182, 212, 0.14);
+
+  --font-heading: 'Fraunces', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --container: 1180px;
+  --radius: 18px;
+  --section-padding: 7rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(100% - 2rem, var(--container));
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: 1.05;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6.8rem);
+  letter-spacing: -0.06em;
+}
+
+h2 {
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  letter-spacing: -0.045em;
+}
+
+h3 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: -0.025em;
+}
+
+p {
+  color: var(--color-muted);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.lead {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  max-width: 760px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.9rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--color-border);
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  color: #041014;
+  border-color: var(--color-accent);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text);
+}
+
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.015)
+  );
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  :root {
+    --section-padding: 4.5rem;
+  }
+
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
