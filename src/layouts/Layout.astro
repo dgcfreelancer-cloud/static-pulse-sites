@@ -6,7 +6,10 @@ import Footer from '../components/Footer.astro';
 const {
   title = 'Static Pulse Sites',
   description = 'Custom-coded websites for businesses that value simplicity, speed, and security.',
+  image = '/og-image.png',
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -15,8 +18,22 @@ const {
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
+
+    <link rel="canonical" href={canonicalURL} />
     <link rel="icon" href="/favicon.ico" />
+
+    <title>{title}</title>
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(image, Astro.site)} />
   </head>
 
   <body>
