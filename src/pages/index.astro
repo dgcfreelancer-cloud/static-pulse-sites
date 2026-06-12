@@ -1,18 +1,23 @@
 ---
-import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<section class="section">
-  <div class="container">
-    <p class="eyebrow">Phase 2 // Design System</p>
-    <h1>Static Pulse Sites</h1>
-    <p class="lead">
-      Project foundation complete. Design system is now connected.
-    </p>
+<Layout
+  title="Static Pulse Sites | Custom-Coded Websites"
+  description="Custom-coded websites for businesses that value simplicity, speed, and security."
+>
+  <section class="section page-test">
+    <div class="container">
+      <p class="eyebrow">Phase 3 // Global Layout</p>
+      <h1>Static Pulse Sites</h1>
+      <p class="lead">
+        Header, footer, global styles, and layout system are now connected.
+      </p>
 
-    <div class="button-row">
-      <a class="btn btn-primary" href="#">Primary Button</a>
-      <a class="btn btn-secondary" href="#">Secondary Button</a>
+      <div class="button-row">
+        <a class="btn btn-primary" href="/contact">Contact</a>
+        <a class="btn btn-secondary" href="/services">View Services</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</Layout>
