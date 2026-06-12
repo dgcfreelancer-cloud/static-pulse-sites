@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact Static Pulse Sites | Start Your Website Project"
+  description="Contact Static Pulse Sites to request a custom-coded static website for your small or medium business."
+>
+  <section class="contact-page">
+    <div class="container contact-layout">
+      <div class="contact-intro">
+        <p class="eyebrow">Contact // Start Your Project</p>
+        <h1>Tell us what kind of website your business needs.</h1>
+
+        <p class="contact-lead">
+          Share a few details about your business, your goals, and the kind of support you're looking for. We’ll review your request and reply with recommended next steps.
+        </p>
+
+        <div class="contact-points">
+          <div>
+            <p class="card-label">Secure by Design</p>
+            <p>Fewer moving parts. Clean, modern architecture.</p>
+          </div>
+
+          <div>
+            <p class="card-label">Fast Performance</p>
+            <p>Static websites built for speed, clarity, and SEO.</p>
+          </div>
+
+          <div>
+            <p class="card-label">You Own Your Site</p>
+            <p>Your code, your content, your hosting, your asset.</p>
+          </div>
+        </div>
+
+        <div class="contact-help">
+          <p class="card-label">Not sure which package fits?</p>
+          <p>That’s okay. We’ll help you figure it out.</p>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <div class="contact-form-heading">
+          <p class="card-label">What Happens Next</p>
+          <h2>We’ll review your request first.</h2>
+          <p>
+            If your project fits, we’ll reply with recommended next steps.
+          </p>
+        </div>
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/xnjyojrv"
+          method="POST"
+        >
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name *</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" placeholder="you@email.com" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" placeholder="Your company" />
+            </div>
+
+            <div class="form-field">
+              <label for="industry">Industry</label>
+              <input id="industry" name="industry" type="text" placeholder="Your industry" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="package">Package Interested In</label>
+            <select id="package" name="package">
+              <option value="">Select an option</option>
+              <option value="The Core Build">The Core Build</option>
+              <option value="Build + Basic Design">Build + Basic Design</option>
+              <option value="Build + Approachable SEO">Build + Approachable SEO</option>
+              <option value="Hardened Maintenance">Hardened Maintenance</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message *</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="7"
+              placeholder="Tell us about your project, your goals, and anything else that helps."
+              required
+            ></textarea>
+          </div>
+
+          <input type="hidden" name="_subject" value="New Static Pulse Sites inquiry" />
+
+          <button class="btn btn-primary contact-submit" type="submit">
+            Send Project Request →
+          </button>
+
+          <p class="privacy-note">
+            Your information is safe. We’ll never share it.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>

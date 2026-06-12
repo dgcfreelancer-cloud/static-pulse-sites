@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<Layout
+  title="Thank You | Static Pulse Sites"
+  description="Thank you for contacting Static Pulse Sites."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Request Received</p>
+      <h1>Thank you. We’ll review your project request.</h1>
+      <p class="lead hero-lead">
+        Your message has been sent. If your project fits Static Pulse Sites, we’ll reply with recommended next steps.
+      </p>
+
+      <div class="button-row">
+        <a class="btn btn-primary" href="/">Back to Home</a>
+        <a class="btn btn-secondary" href="/services">View Services</a>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    eyebrow="Next Step"
+    title="While you wait, explore our website packages."
+    text="See which Static Pulse Sites package best matches your business needs."
+    buttonText="View Services"
+    buttonHref="/services"
+  />
+</Layout>

@@ -634,3 +634,144 @@ p {
     rgba(255, 255, 255, 0.02)
   );
 }
+
+/* PHASE 13 — CONTACT PAGE */
+
+.contact-page {
+  padding: 5rem 0 7rem;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-intro h1 {
+  max-width: 760px;
+}
+
+.contact-lead {
+  max-width: 560px;
+  margin-top: 2rem;
+  font-size: 1.15rem;
+}
+
+.contact-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.contact-points div {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+}
+
+.contact-help {
+  margin-top: 3rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.contact-form-card {
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--radius) + 14px);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background:
+    radial-gradient(circle at top right, rgba(6, 182, 212, 0.12), transparent 35%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018));
+}
+
+.contact-form-heading {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form-heading h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.contact-form-heading p:not(.card-label) {
+  margin-top: 0.75rem;
+}
+
+.contact-form {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-field {
+  margin-bottom: 1.25rem;
+}
+
+.form-field label {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: rgba(7, 13, 23, 0.45);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.95rem 1rem;
+  outline: none;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(176, 188, 205, 0.7);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: rgba(6, 182, 212, 0.75);
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.contact-submit {
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+.privacy-note {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1000px) {
+  .contact-layout,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-points {
+    grid-template-columns: 1fr;
+  }
+}
