@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import FAQItem from '../../components/FAQItem.astro';
+import CTA from '../../components/CTA.astro';
+---
+
+<Layout
+  title="Static Websites for Architects & High-End Artisans | Static Pulse Sites"
+  description="Elegant, fast-loading static websites for architects, artisans, makers, and visual brands that need portfolio quality without slow builder platforms."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Industry // Visual Portfolio Websites</p>
+      <h1>Elegant portfolio websites for architects and high-end artisans</h1>
+      <p class="lead hero-lead">
+        Visual businesses need websites that feel polished, refined, and fast. Static Pulse Sites builds custom-coded portfolio websites that showcase work beautifully without sacrificing performance.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Why It Matters" title="Your website should reflect the quality of your work." text="For architects, artisans, makers, and visual studios, the website is often part of the first impression." />
+
+      <div class="grid-3">
+        <FeatureCard label="01 // Visual Quality" title="Portfolio presentation" text="Your work should be displayed clearly, elegantly, and without unnecessary clutter." />
+        <FeatureCard label="02 // Speed" title="Fast image delivery" text="Image-heavy websites need careful optimization to avoid slow page experiences." />
+        <FeatureCard label="03 // Craft" title="Premium positioning" text="Typography, spacing, and layout can communicate quality before visitors read a word." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Common Problems" title="Many portfolio sites look good but load slowly." text="Visual websites often rely on heavy builders, oversized images, and template systems that reduce performance." />
+
+      <div class="grid-3">
+        <FeatureCard label="Problem 01" title="Slow visual builders" text="Drag-and-drop platforms can become heavy when displaying galleries and large imagery." />
+        <FeatureCard label="Problem 02" title="Generic portfolio layouts" text="Many visual brands end up with websites that feel too similar to everyone else." />
+        <FeatureCard label="Problem 03" title="Weak content structure" text="Portfolio websites still need clear project descriptions, services, and contact paths." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="How We Help" title="A clean portfolio foundation with speed and polish." text="We build lightweight static websites that combine strong visual presentation with fast performance." />
+
+      <div class="grid-3">
+        <FeatureCard label="01 // Layout" title="Elegant visual structure" text="Pages are designed around strong typography, spacing, and portfolio clarity." />
+        <FeatureCard label="02 // Images" title="Optimized media" text="Images are handled carefully so your work looks refined without slowing the site." />
+        <FeatureCard label="03 // Ownership" title="No platform lock-in" text="You retain control of your website assets, content, code, and hosting." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Recommended Package" title="Best fit for visual businesses: Build + Basic Design." text="Architects and artisans benefit from layout refinement, typography, image optimization, and clean portfolio structure." />
+
+      <div class="grid-2">
+        <ServiceCard
+          label="02 // Basic Design"
+          title="Build + Basic Design"
+          price="$1,400–$1,800 USD"
+          description="A custom-coded portfolio-style website with visual polish and performance-conscious structure."
+          highlighted={true}
+          items={[
+            '3–5 page Astro website',
+            'Portfolio layout structure',
+            'Typography selection',
+            'Image optimization',
+            'Responsive design',
+            'Deployment setup',
+          ]}
+        />
+
+        <div class="card">
+          <p class="card-label">Typical Pages</p>
+          <h3>Suggested visual site structure</h3>
+          <ul class="check-list">
+            <li>Home</li>
+            <li>Portfolio or Work</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Mini FAQ" title="Questions visual businesses often ask." text="A few simple answers before starting a portfolio website." />
+
+      <FAQItem question="Can you build a portfolio website without Squarespace?" answer="Yes. Static Pulse Sites can build custom-coded portfolio websites without relying on drag-and-drop website builders." />
+      <FAQItem question="Can the site include image galleries?" answer="Yes. We can include portfolio imagery while keeping performance and structure in mind." />
+      <FAQItem question="Do you create brand identities?" answer="Not fully in Version 1. We can support simple typography, layout, and visual direction, but not full brand strategy yet." />
+    </div>
+  </section>
+
+  <CTA
+    eyebrow="Portfolio Website Build"
+    title="Need a faster, more refined website for your work?"
+    text="Build a visual website that feels polished, loads quickly, and gives your business full ownership."
+    buttonText="Request a Portfolio Website"
+    buttonHref="/contact"
+  />
+</Layout>

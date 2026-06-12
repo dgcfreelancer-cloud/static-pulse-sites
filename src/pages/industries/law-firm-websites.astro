@@ -1,0 +1,186 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import FAQItem from '../../components/FAQItem.astro';
+import CTA from '../../components/CTA.astro';
+---
+
+<Layout
+  title="Static Websites for Law Firms | Static Pulse Sites"
+  description="Fast, secure, custom-coded websites for law firms and legal professionals who need credibility, clarity, and ownership without WordPress plugin dependency."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Industry // Legal Websites</p>
+      <h1>Custom-coded websites for law firms that need trust, speed, and reliability</h1>
+      <p class="lead hero-lead">
+        Law firms depend on credibility. Static Pulse Sites builds clean, professional websites that help legal practices present services clearly, load quickly, and reduce unnecessary platform complexity.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Why It Matters"
+        title="Your website is often the first trust signal a potential client sees."
+        text="For legal professionals, a website should feel clear, professional, and reliable. It should explain your services without friction and support your reputation from the first visit."
+      />
+
+      <div class="grid-3">
+        <FeatureCard
+          label="01 // Trust"
+          title="Professional credibility"
+          text="A clean, focused website helps potential clients understand your practice and feel confident reaching out."
+        />
+
+        <FeatureCard
+          label="02 // Clarity"
+          title="Service explanation"
+          text="Legal services can feel overwhelming. Clear page structure helps visitors understand what you do and who you help."
+        />
+
+        <FeatureCard
+          label="03 // Reliability"
+          title="Less platform friction"
+          text="A streamlined static website reduces many common maintenance issues associated with plugin-heavy platforms."
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Common Problems"
+        title="Many law firm websites are slower, heavier, and harder to maintain than they need to be."
+        text="A legal website does not need to be complicated to be effective. In many cases, complexity creates more risk than value."
+      />
+
+      <div class="grid-3">
+        <FeatureCard
+          label="Problem 01"
+          title="Plugin dependency"
+          text="Many sites rely on multiple plugins for basic features, creating ongoing update and compatibility concerns."
+        />
+
+        <FeatureCard
+          label="Problem 02"
+          title="Slow load times"
+          text="Heavy themes, large images, and bloated builders can create a poor first impression before a visitor even reads your content."
+        />
+
+        <FeatureCard
+          label="Problem 03"
+          title="Unclear ownership"
+          text="Some businesses do not know who controls their domain, hosting, code, or website assets until something goes wrong."
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="How We Help"
+        title="A safer, simpler web foundation for your legal practice."
+        text="Static Pulse Sites focuses on building professional, informational websites with clean architecture and clear ownership."
+      />
+
+      <div class="grid-3">
+        <FeatureCard
+          label="01 // Static Build"
+          title="Clean static architecture"
+          text="Your site is built without unnecessary dashboard complexity or plugin dependency."
+        />
+
+        <FeatureCard
+          label="02 // Structure"
+          title="Clear service pages"
+          text="We organize your website around your practice areas, location, and client questions."
+        />
+
+        <FeatureCard
+          label="03 // Ownership"
+          title="Client-owned assets"
+          text="Your website assets remain under your control, including domain, hosting, content, and code repository."
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Recommended Package"
+        title="Best fit for most law firms: Build + Approachable SEO."
+        text="Law firms benefit from clear service pages, strong metadata, structured headings, and local search foundations."
+      />
+
+      <div class="grid-2">
+        <ServiceCard
+          label="03 // Approachable SEO"
+          title="Build + Approachable SEO"
+          price="$1,500–$2,000 USD"
+          description="A custom-coded static website with foundational SEO structure for service-based professionals."
+          highlighted={true}
+          items={[
+            '3–5 page Astro website',
+            'Responsive design',
+            'Practice-area page structure',
+            'Basic keyword optimization',
+            'Metadata',
+            'Search Console setup',
+          ]}
+        />
+
+        <div class="card">
+          <p class="card-label">Typical Pages</p>
+          <h3>Suggested law firm structure</h3>
+          <ul class="check-list">
+            <li>Home</li>
+            <li>About the Firm</li>
+            <li>Practice Areas</li>
+            <li>Service or Location Page</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Mini FAQ"
+        title="Questions law firms often ask."
+        text="A few simple answers before starting a legal website project."
+      />
+
+      <FAQItem
+        question="Can you build a website for a solo legal practitioner?"
+        answer="Yes. Static Pulse Sites is especially well suited for solo lawyers and small firms that need a professional website without unnecessary complexity."
+      />
+
+      <FAQItem
+        question="Can you help with local SEO?"
+        answer="Yes. The Approachable SEO package includes basic keyword structure, metadata, headings, and Search Console setup."
+      />
+
+      <FAQItem
+        question="Do you build client portals or secure document upload systems?"
+        answer="Not in Version 1. Static Pulse Sites currently focuses on informational websites, not portals, databases, or sensitive client intake systems."
+      />
+    </div>
+  </section>
+
+  <CTA
+    eyebrow="Legal Website Build"
+    title="Need a cleaner, faster website for your law firm?"
+    text="Start with a secure, professional foundation that helps potential clients understand your services and reach out with confidence."
+    buttonText="Request a Law Firm Website"
+    buttonHref="/contact"
+  />
+</Layout>

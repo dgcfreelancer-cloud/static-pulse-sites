@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import FAQItem from '../../components/FAQItem.astro';
+import CTA from '../../components/CTA.astro';
+---
+
+<Layout
+  title="Static Websites for Medical & Dental Clinics | Static Pulse Sites"
+  description="Fast, simple informational websites for medical and dental clinics that need clear service pages, local search foundations, and reduced platform complexity."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Industry // Clinic Websites</p>
+      <h1>Fast, simple websites for medical and dental clinics</h1>
+      <p class="lead hero-lead">
+        Clinic websites should make essential information easy to find. Static Pulse Sites builds clean informational websites that help patients understand services, hours, location, and contact options quickly.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Why It Matters" title="Patients need reliable information without friction." text="A clinic website should be fast, clear, and easy to use, especially on mobile devices." />
+
+      <div class="grid-3">
+        <FeatureCard label="01 // Access" title="Easy information" text="Visitors should quickly find services, hours, location, contact details, and next steps." />
+        <FeatureCard label="02 // Trust" title="Professional credibility" text="A clean website supports confidence before a patient contacts the clinic." />
+        <FeatureCard label="03 // Local Search" title="Search visibility basics" text="Structured pages and metadata can support local search discovery." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Common Problems" title="Many clinic websites are harder to use than they need to be." text="For informational clinic sites, simplicity and clarity are often more valuable than complex systems." />
+
+      <div class="grid-3">
+        <FeatureCard label="Problem 01" title="Hard-to-find information" text="Patients may leave if hours, location, services, or contact details are buried." />
+        <FeatureCard label="Problem 02" title="Slow mobile experience" text="Many users search for clinics from mobile devices, where speed and clarity matter." />
+        <FeatureCard label="Problem 03" title="Unnecessary complexity" text="A simple clinic website may not need heavy plugins or complex platform features." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="How We Help" title="A clear, reliable web presence for essential clinic information." text="We focus on informational clinic websites with strong structure, mobile readability, and practical SEO foundations." />
+
+      <div class="grid-3">
+        <FeatureCard label="01 // Structure" title="Service organization" text="We organize services, location, hours, and contact information clearly." />
+        <FeatureCard label="02 // Performance" title="Fast mobile pages" text="Static architecture helps your site load quickly and reliably." />
+        <FeatureCard label="03 // Simplicity" title="No unnecessary tools" text="We avoid building complex systems when a focused informational site is the better fit." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Recommended Package" title="Best fit for clinics: Build + Approachable SEO." text="Medical and dental clinics benefit from clear service pages, local search foundations, and mobile performance." />
+
+      <div class="grid-2">
+        <ServiceCard
+          label="03 // Approachable SEO"
+          title="Build + Approachable SEO"
+          price="$1,500–$2,000 USD"
+          description="A custom-coded informational website with practical local SEO structure."
+          highlighted={true}
+          items={[
+            '3–5 page Astro website',
+            'Service page structure',
+            'Local SEO foundations',
+            'Metadata',
+            'Responsive design',
+            'Search Console setup',
+          ]}
+        />
+
+        <div class="card">
+          <p class="card-label">Typical Pages</p>
+          <h3>Suggested clinic site structure</h3>
+          <ul class="check-list">
+            <li>Home</li>
+            <li>Services</li>
+            <li>About the Clinic</li>
+            <li>Location & Hours</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Mini FAQ" title="Questions clinics often ask." text="A few simple answers before starting a clinic website." />
+
+      <FAQItem question="Can you build a simple informational clinic website?" answer="Yes. Static Pulse Sites is a good fit for clinics that need service information, location details, and contact options." />
+      <FAQItem question="Do you build patient portals?" answer="Not in Version 1. We do not build patient portals, databases, or systems for sensitive medical information." />
+      <FAQItem question="Can you include booking links?" answer="Yes. We can link to an external booking platform if your clinic already uses one." />
+    </div>
+  </section>
+
+  <CTA
+    eyebrow="Clinic Website Build"
+    title="Need a clearer website for your clinic?"
+    text="Build a fast informational site that helps patients find what they need quickly."
+    buttonText="Request a Clinic Website"
+    buttonHref="/contact"
+  />
+</Layout>

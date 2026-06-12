@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import FAQItem from '../../components/FAQItem.astro';
+import CTA from '../../components/CTA.astro';
+---
+
+<Layout
+  title="Static Websites for Consulting Firms | Static Pulse Sites"
+  description="Fast, professional static websites for boutique consulting firms, advisors, agencies, and experts who need credibility and performance."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Industry // Consulting Websites</p>
+      <h1>Authority-driven websites for consultants and boutique firms</h1>
+      <p class="lead hero-lead">
+        Consulting websites need to establish expertise quickly. Static Pulse Sites builds clean, fast websites that help firms communicate value, credibility, and services with confidence.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Why It Matters" title="Your website should support authority before the first conversation." text="Corporate and professional buyers often review your site before reaching out. A clear, fast, polished website can support trust." />
+
+      <div class="grid-3">
+        <FeatureCard label="01 // Authority" title="Clear expertise" text="Your website should quickly explain what you do, who you serve, and why your work matters." />
+        <FeatureCard label="02 // Speed" title="Professional performance" text="Slow or cluttered pages can weaken credibility with high-value prospects." />
+        <FeatureCard label="03 // Focus" title="Service clarity" text="A focused website helps potential clients understand your offers and next steps." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Common Problems" title="Many consulting websites fail to communicate value clearly." text="A professional site does not need to be complicated, but it does need to be precise." />
+
+      <div class="grid-3">
+        <FeatureCard label="Problem 01" title="Vague messaging" text="Visitors may leave if they cannot quickly understand the firm's specialty or value." />
+        <FeatureCard label="Problem 02" title="Generic design" text="Template-based websites often fail to reflect the quality of the consulting work." />
+        <FeatureCard label="Problem 03" title="Weak structure" text="Service pages need to be organized around client needs, not just internal categories." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="How We Help" title="A clean website foundation for expertise-based businesses." text="We build static websites that support credibility, speed, and focused service communication." />
+
+      <div class="grid-3">
+        <FeatureCard label="01 // Positioning" title="Clear service architecture" text="Pages are structured around your offers, audience, and proof points." />
+        <FeatureCard label="02 // Performance" title="Fast, polished experience" text="Lightweight static builds help visitors move through your site without friction." />
+        <FeatureCard label="03 // Ownership" title="Business-owned assets" text="Your website assets remain under your control, not locked inside a proprietary platform." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Recommended Package" title="Best fit for consultants: Build + Approachable SEO." text="Consulting firms benefit from clear service pages, search foundations, and authority-building structure." />
+
+      <div class="grid-2">
+        <ServiceCard
+          label="03 // Approachable SEO"
+          title="Build + Approachable SEO"
+          price="$1,500–$2,000 USD"
+          description="A custom-coded static website with practical SEO structure for expertise-based businesses."
+          highlighted={true}
+          items={[
+            '3–5 page Astro website',
+            'Service page structure',
+            'Basic keyword optimization',
+            'Metadata',
+            'Responsive design',
+            'Search Console setup',
+          ]}
+        />
+
+        <div class="card">
+          <p class="card-label">Typical Pages</p>
+          <h3>Suggested consulting site structure</h3>
+          <ul class="check-list">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Industries or Approach</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Mini FAQ" title="Questions consultants often ask." text="A few simple answers before starting a consulting website." />
+
+      <FAQItem question="Can you build a website for a solo consultant?" answer="Yes. Static Pulse Sites is a strong fit for solo consultants and boutique firms." />
+      <FAQItem question="Can you help organize my services?" answer="Yes. We can structure pages around your offers, audience, and conversion path." />
+      <FAQItem question="Do you build dashboards or client portals?" answer="Not in Version 1. We focus on informational business websites, not complex software systems." />
+    </div>
+  </section>
+
+  <CTA
+    eyebrow="Consulting Website Build"
+    title="Need a sharper website for your consulting business?"
+    text="Build a fast, professional online presence that supports authority and makes your services easier to understand."
+    buttonText="Request a Consulting Website"
+    buttonHref="/contact"
+  />
+</Layout>

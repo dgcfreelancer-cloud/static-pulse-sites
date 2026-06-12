@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import FAQItem from '../../components/FAQItem.astro';
+import CTA from '../../components/CTA.astro';
+---
+
+<Layout
+  title="Static Websites for Retreat Centers | Static Pulse Sites"
+  description="Custom-coded websites for retreat centers and wellness organizations that need clear program pages, fast performance, and strong ownership."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Industry // Retreat Websites</p>
+      <h1>Content-rich websites for retreat centers and wellness organizations</h1>
+      <p class="lead hero-lead">
+        Retreat websites need to communicate trust, experience, logistics, and transformation. Static Pulse Sites builds fast, clear websites for programs that need strong storytelling without bloated platforms.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Why It Matters" title="People need clarity before committing to a retreat." text="Retreat websites must answer practical questions while also communicating the depth and quality of the experience." />
+
+      <div class="grid-3">
+        <FeatureCard label="01 // Trust" title="Professional presentation" text="A polished website helps people feel confident about your team, location, and program." />
+        <FeatureCard label="02 // Clarity" title="Clear logistics" text="Dates, pricing, travel details, accommodations, and expectations need to be easy to find." />
+        <FeatureCard label="03 // Story" title="Experience-focused content" text="Your website should communicate the feeling and purpose of the retreat without becoming cluttered." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Common Problems" title="Retreat websites often become slow, confusing, or overloaded." text="When pages are packed with heavy images, plugins, and unclear information, visitors lose trust." />
+
+      <div class="grid-3">
+        <FeatureCard label="Problem 01" title="Too much scattered information" text="Important details can get buried when the page structure is not planned carefully." />
+        <FeatureCard label="Problem 02" title="Slow image-heavy pages" text="Large visuals are important, but they need to be optimized so the site still loads quickly." />
+        <FeatureCard label="Problem 03" title="Unclear conversion path" text="Visitors need to know whether to apply, book a call, register, or contact the team." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="How We Help" title="A focused structure for programs, logistics, and trust." text="We create static websites that organize retreat information clearly while keeping performance strong." />
+
+      <div class="grid-3">
+        <FeatureCard label="01 // Structure" title="Program-focused pages" text="Your retreat, team, itinerary, pricing, and FAQs are organized into a clear path." />
+        <FeatureCard label="02 // Performance" title="Optimized visuals" text="Images are handled carefully so the site feels beautiful without becoming slow." />
+        <FeatureCard label="03 // Ownership" title="No platform lock-in" text="You keep control of your content, code, hosting, and domain." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Recommended Package" title="Best fit for retreat centers: Build + Basic Design." text="Retreat websites need strong layout, visual polish, and clear information architecture." />
+
+      <div class="grid-2">
+        <ServiceCard
+          label="02 // Basic Design"
+          title="Build + Basic Design"
+          price="$1,400–$1,800 USD"
+          description="A polished static website for retreats, programs, and wellness organizations."
+          highlighted={true}
+          items={[
+            'Program page structure',
+            'Responsive design',
+            'Visual layout refinement',
+            'Image optimization',
+            'Contact or inquiry form',
+            'Deployment setup',
+          ]}
+        />
+
+        <div class="card">
+          <p class="card-label">Typical Pages</p>
+          <h3>Suggested retreat site structure</h3>
+          <ul class="check-list">
+            <li>Home</li>
+            <li>Retreat or Program Page</li>
+            <li>About the Team</li>
+            <li>Travel & Logistics</li>
+            <li>Contact or Apply</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Mini FAQ" title="Questions retreat centers often ask." text="A few simple answers before starting a retreat website." />
+
+      <FAQItem question="Can you build a retreat landing page?" answer="Yes. A static landing page is a strong fit for retreats, workshops, and seasonal programs." />
+      <FAQItem question="Can the site include lots of photos?" answer="Yes. We can include photography while optimizing images for performance." />
+      <FAQItem question="Do you build booking or payment systems?" answer="Not in Version 1. We can link to external booking or payment tools, but we do not build complex payment systems yet." />
+    </div>
+  </section>
+
+  <CTA
+    eyebrow="Retreat Website Build"
+    title="Need a clearer website for your retreat or wellness program?"
+    text="Create a fast, professional website that communicates the experience and helps people take the next step."
+    buttonText="Request a Retreat Website"
+    buttonHref="/contact"
+  />
+</Layout>

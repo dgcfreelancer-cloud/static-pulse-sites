@@ -1,0 +1,129 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import FAQItem from '../../components/FAQItem.astro';
+import CTA from '../../components/CTA.astro';
+---
+
+<Layout
+  title="Static Websites for Therapists & Wellness Coaches | Static Pulse Sites"
+  description="Fast, calm, custom-coded websites for therapists, wellness coaches, and private practices that need clarity, trust, and ownership."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Industry // Wellness Websites</p>
+      <h1>Calm, professional websites for therapists and wellness coaches</h1>
+      <p class="lead hero-lead">
+        Your website should feel trustworthy, clear, and easy to navigate. Static Pulse Sites builds focused static websites that help people understand your services and reach out with confidence.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Why It Matters"
+        title="People often visit your website before they feel ready to contact you."
+        text="For therapists and wellness professionals, the website experience should feel calm, private, and reassuring. Clarity matters."
+      />
+
+      <div class="grid-3">
+        <FeatureCard label="01 // Trust" title="A reassuring first impression" text="A calm, polished website helps potential clients feel safe exploring your services." />
+        <FeatureCard label="02 // Clarity" title="Clear service information" text="Visitors should understand your approach, specialties, and next steps without confusion." />
+        <FeatureCard label="03 // Simplicity" title="No unnecessary complexity" text="A focused static website supports your practice without heavy tools or bloated systems." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Common Problems"
+        title="Many wellness websites feel either too generic or too complicated."
+        text="Your website should not feel like a template, but it also does not need complex software to work well."
+      />
+
+      <div class="grid-3">
+        <FeatureCard label="Problem 01" title="Template sameness" text="Many wellness websites look alike and fail to communicate the unique tone of the practice." />
+        <FeatureCard label="Problem 02" title="Unclear next steps" text="Visitors may leave if they cannot quickly understand services, fit, location, or contact options." />
+        <FeatureCard label="Problem 03" title="Platform maintenance" text="Plugin-heavy sites may require ongoing updates that many small practices do not want to manage." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="How We Help"
+        title="A clean website foundation for trust-based wellness work."
+        text="We build simple, elegant websites that communicate your services without overwhelming visitors."
+      />
+
+      <div class="grid-3">
+        <FeatureCard label="01 // Tone" title="Calm visual structure" text="Layouts are designed to feel spacious, readable, and professional." />
+        <FeatureCard label="02 // Services" title="Clear service pages" text="Your offerings, specialties, and contact process are organized clearly." />
+        <FeatureCard label="03 // Ownership" title="Client-owned assets" text="You keep control of your website content, code, domain, and hosting." />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Recommended Package"
+        title="Best fit for most wellness professionals: Build + Basic Design."
+        text="Therapists and wellness professionals benefit from a polished, calming visual direction and clear service structure."
+      />
+
+      <div class="grid-2">
+        <ServiceCard
+          label="02 // Basic Design"
+          title="Build + Basic Design"
+          price="$1,400–$1,800 USD"
+          description="A custom-coded static website with thoughtful typography, layout polish, and image optimization."
+          highlighted={true}
+          items={[
+            '3–5 page Astro website',
+            'Responsive design',
+            'Calm visual direction',
+            'Service page structure',
+            'Contact form',
+            'Image optimization',
+          ]}
+        />
+
+        <div class="card">
+          <p class="card-label">Typical Pages</p>
+          <h3>Suggested wellness site structure</h3>
+          <ul class="check-list">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Approach</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle eyebrow="Mini FAQ" title="Questions wellness professionals often ask." text="A few simple answers before starting your website." />
+
+      <FAQItem question="Can you build a website for a solo therapist or coach?" answer="Yes. Static websites are a strong fit for solo practitioners who need a professional online presence without complicated systems." />
+      <FAQItem question="Can you make the site feel warm and calm?" answer="Yes. The Build + Basic Design package includes simple visual direction, typography, spacing, and layout polish." />
+      <FAQItem question="Do you build private client portals?" answer="Not in Version 1. Static Pulse Sites currently focuses on informational websites, not portals or sensitive client systems." />
+    </div>
+  </section>
+
+  <CTA
+    eyebrow="Wellness Website Build"
+    title="Need a calmer, clearer website for your practice?"
+    text="Build a professional online presence that helps people understand your work and reach out with confidence."
+    buttonText="Request a Wellness Website"
+    buttonHref="/contact"
+  />
+</Layout>
