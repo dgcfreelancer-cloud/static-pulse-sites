@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<Layout
+  title="Services & Pricing | Static Pulse Sites"
+  description="Simple website packages for businesses that want fast, secure, custom-coded websites without WordPress, Squarespace, or plugin dependency."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Services // Pricing</p>
+      <h1>Simple website packages for serious business foundations.</h1>
+      <p class="lead hero-lead">
+        Choose the level of support your business needs now. Every package is built around clean code, fast performance, fewer unnecessary dependencies, and long-term ownership.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Website Builds"
+        title="One-time build packages"
+        text="Start with a clean, professional static website that gives your business a stronger online foundation."
+      />
+
+      <div class="grid-3">
+        <ServiceCard
+          label="01 // Core Build"
+          title="The Core Build"
+          price="$800–$1,200 USD"
+          description="For businesses that already have copy, images, and a clear direction."
+          items={[
+            '3–5 page Astro website',
+            'Fully responsive layout',
+            'Contact form setup',
+            'Deployment setup',
+            'Basic SEO setup',
+            'Performance optimization',
+          ]}
+        />
+
+        <ServiceCard
+          label="02 // Basic Design"
+          title="Build + Basic Design"
+          price="$1,400–$1,800 USD"
+          description="For businesses that need help shaping a clean, polished, professional visual direction."
+          items={[
+            'Everything in Core Build',
+            'Typography selection',
+            'Layout refinement',
+            'Simple visual direction',
+            'Premium component styling',
+            'Image optimization',
+          ]}
+        />
+
+        <ServiceCard
+          label="03 // Approachable SEO"
+          title="Build + Approachable SEO"
+          price="$1,500–$2,000 USD"
+          description="For businesses that want a strong website foundation with practical search visibility basics."
+          highlighted={true}
+          items={[
+            'Everything in Core Build',
+            'Basic keyword optimization',
+            'Meta titles and descriptions',
+            'Structured headings',
+            'Sitemap setup',
+            'Search Console setup',
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Monthly Care"
+        title="Hardened Maintenance"
+        text="For businesses that want continued help keeping their static website healthy, backed up, and updated."
+      />
+
+      <div class="grid-2">
+        <ServiceCard
+          label="04 // Maintenance"
+          title="Hardened Maintenance"
+          price="$49–$99 USD / month"
+          description="Monthly support for simple content updates, monitoring, backups, and hosting management."
+          items={[
+            'Hosting management',
+            'Uptime monitoring',
+            'Regular code backups',
+            'Up to 2 hours of content edits',
+            'Website health reviews',
+          ]}
+        />
+
+        <div class="card">
+          <p class="card-label">Important // Scope</p>
+          <h3>Built for simple, secure websites.</h3>
+          <p>
+            Static Pulse Sites focuses on informational business websites. We do not currently build complex web applications, client portals, membership platforms, or e-commerce systems.
+          </p>
+          <br />
+          <p>
+            This keeps the service focused, reliable, affordable, and aligned with the safety-first promise of the brand.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="How Projects Work"
+        title="A simple process from planning to launch."
+        text="Every project follows a clear sequence so you always know what is happening next."
+      />
+
+      <div class="grid-3">
+        <div class="card">
+          <p class="card-label">01 // Plan</p>
+          <h3>Define the foundation</h3>
+          <p>
+            We clarify your pages, audience, content, design direction, and technical needs before building.
+          </p>
+        </div>
+
+        <div class="card">
+          <p class="card-label">02 // Build</p>
+          <h3>Create the site</h3>
+          <p>
+            Your website is built with clean static code, responsive layouts, and performance-focused structure.
+          </p>
+        </div>
+
+        <div class="card">
+          <p class="card-label">03 // Launch</p>
+          <h3>Deploy and hand over</h3>
+          <p>
+            We deploy the website, confirm everything works, and make sure you understand what belongs to you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    eyebrow="Start Your Project"
+    title="Need a fast, secure website your business actually owns?"
+    text="Tell us what you need, and we’ll recommend the simplest package that fits your goals."
+    buttonText="Request a Quote"
+    buttonHref="/contact"
+  />
+</Layout>
