@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import IndustryCard from '../components/IndustryCard.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<Layout
+  title="Industries We Serve | Static Pulse Sites"
+  description="Custom-coded static websites for law firms, therapists, consultants, clinics, retreat centers, architects, artisans, and other trust-based businesses."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Industries // Static Websites</p>
+      <h1>Websites for businesses where trust, speed, and clarity matter.</h1>
+      <p class="lead hero-lead">
+        Static Pulse Sites focuses on professionals and small businesses that need a reliable online presence without unnecessary platform complexity.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Who We Build For"
+        title="Focused website solutions for professional industries."
+        text="Each industry has different trust signals, content needs, and client expectations. We build clean static websites around those realities."
+      />
+
+      <div class="grid-3">
+        <IndustryCard
+          label="01 // Legal"
+          title="Law Firms"
+          text="Professional websites designed around credibility, trust, service clarity, and reputation."
+          href="/industries/law-firm-websites"
+        />
+
+        <IndustryCard
+          label="02 // Wellness"
+          title="Therapists & Wellness Professionals"
+          text="Calm, polished websites that communicate services clearly and help potential clients feel safe reaching out."
+          href="/industries/therapist-websites"
+        />
+
+        <IndustryCard
+          label="03 // Retreats"
+          title="Retreat Centers"
+          text="Content-focused websites for programs, retreats, wellness experiences, and transformational services."
+          href="/industries/retreat-center-websites"
+        />
+
+        <IndustryCard
+          label="04 // Consulting"
+          title="Consultants"
+          text="Authority-driven websites for boutique firms, advisors, HR consultants, finance consultants, and agencies."
+          href="/industries/consulting-firm-websites"
+        />
+
+        <IndustryCard
+          label="05 // Clinics"
+          title="Medical & Dental Clinics"
+          text="Simple, reliable websites that help patients find services, hours, locations, and contact information quickly."
+          href="/industries/medical-clinic-websites"
+        />
+
+        <IndustryCard
+          label="06 // Craft"
+          title="Architects & High-End Artisans"
+          text="Elegant, fast-loading portfolio websites for architecture studios, artisans, makers, and visual brands."
+          href="/industries/architect-websites"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Why Static Works"
+        title="Most professional websites need clarity, not complexity."
+        text="For many service-based businesses, a static website is not a limitation. It is an advantage."
+      />
+
+      <div class="grid-3">
+        <div class="card">
+          <p class="card-label">01 // Trust</p>
+          <h3>Clear presentation</h3>
+          <p>
+            Visitors should understand who you are, what you offer, and how to contact you without navigating a cluttered website.
+          </p>
+        </div>
+
+        <div class="card">
+          <p class="card-label">02 // Speed</p>
+          <h3>Fast loading</h3>
+          <p>
+            A lightweight static website helps visitors access information quickly across desktop and mobile devices.
+          </p>
+        </div>
+
+        <div class="card">
+          <p class="card-label">03 // Security</p>
+          <h3>Fewer moving parts</h3>
+          <p>
+            Removing unnecessary plugins and database-driven complexity reduces many common maintenance concerns.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    eyebrow="Find Your Fit"
+    title="Not sure which package fits your industry?"
+    text="Tell us what kind of business you run, and we’ll recommend the simplest website structure for your goals."
+    buttonText="Request a Recommendation"
+    buttonHref="/contact"
+  />
+</Layout>
