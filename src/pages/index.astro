@@ -5,20 +5,19 @@ import SectionTitle from '../components/SectionTitle.astro';
 import FeatureCard from '../components/FeatureCard.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import IndustryCard from '../components/IndustryCard.astro';
-import FAQItem from '../components/FAQItem.astro';
 import OwnershipBlock from '../components/OwnershipBlock.astro';
 import CTA from '../components/CTA.astro';
 ---
 
 <Layout
-  title="Static Pulse Sites | Custom-Coded Websites"
-  description="Custom-coded websites for businesses that value simplicity, speed, and security."
+  title="Custom-Coded Websites for Small Businesses | Static Pulse Sites"
+  description="Replace bloated website builders with fast, secure, custom-coded websites you actually own. No WordPress, no Squarespace, no plugin dependency."
 >
   <Hero
-    eyebrow="Phase 4 // Component Test"
-    title="Static Pulse Sites"
-    text="Reusable components are now connected and ready to build the full website."
-    primaryText="Contact"
+    eyebrow="Custom-Coded Websites"
+    title="Websites built for safety, speed, and ownership."
+    text="Static Pulse Sites helps professionals and small businesses replace bloated website builders with fast, secure, custom-coded websites they actually own."
+    primaryText="Get an Affordable Custom Site"
     primaryHref="/contact"
     secondaryText="View Services"
     secondaryHref="/services"
@@ -27,28 +26,28 @@ import CTA from '../components/CTA.astro';
   <section class="section">
     <div class="container">
       <SectionTitle
-        eyebrow="Feature Cards"
-        title="Everything Your Business Needs"
-        text="Testing reusable feature card components before building real pages."
+        eyebrow="Why Custom Code?"
+        title="Most businesses do not need more website complexity."
+        text="Many businesses are pushed into platforms filled with plugins, dashboards, themes, updates, and maintenance problems. In reality, most professional websites need to do a few things exceptionally well: present services clearly, build trust, generate inquiries, load quickly, and stay reliable."
       />
 
       <div class="grid-3">
         <FeatureCard
-          label="01 // Speed"
-          title="Fast Performance"
-          text="Built with streamlined static architecture for fast loading and reliable delivery."
+          label="01 // Less Complexity"
+          title="No Plugin Dependency"
+          text="We avoid plugin-heavy systems and build with streamlined static architecture, reducing many common maintenance and security concerns."
         />
 
         <FeatureCard
-          label="02 // Security"
-          title="Fewer Attack Surfaces"
-          text="No plugin dependency and less unnecessary complexity."
+          label="02 // Better Performance"
+          title="Fast by Design"
+          text="Static websites are built to load quickly across devices, helping visitors access your services without delays or bloated page experiences."
         />
 
         <FeatureCard
-          label="03 // Ownership"
-          title="True Ownership"
-          text="Your website assets remain under your control."
+          label="03 // More Control"
+          title="Built to Be Owned"
+          text="Your website should belong to your business, not a closed platform or agency-controlled system."
         />
       </div>
     </div>
@@ -57,35 +56,28 @@ import CTA from '../components/CTA.astro';
   <section class="section">
     <div class="container">
       <SectionTitle
-        eyebrow="Services"
-        title="Service Cards"
-        text="Testing pricing cards before building the services page."
+        eyebrow="Core Principles"
+        title="A cleaner foundation for your online presence."
+        text="Static Pulse Sites is built around three principles: fewer attack surfaces, strong performance, and true ownership."
       />
 
-      <div class="grid-2">
-        <ServiceCard
-          label="01 // Core Build"
-          title="The Core Build"
-          price="$800–$1,200 USD"
-          description="A clean 3–5 page static website for businesses that need a professional online foundation."
-          items={[
-            'Responsive website',
-            'Contact form',
-            'Deployment setup',
-          ]}
+      <div class="grid-3">
+        <FeatureCard
+          label="Security"
+          title="Fewer Attack Surfaces"
+          text="By removing unnecessary plugins and database-driven complexity, your website has fewer moving parts to monitor and maintain."
         />
 
-        <ServiceCard
-          label="03 // SEO"
-          title="Build + Approachable SEO"
-          price="$1,500–$2,000 USD"
-          description="A static website with SEO foundations for small businesses that want visibility."
-          highlighted={true}
-          items={[
-            'Metadata',
-            'Structured headings',
-            'Search Console setup',
-          ]}
+        <FeatureCard
+          label="Speed"
+          title="Fast Performance"
+          text="Clean static builds are lightweight, responsive, and designed to deliver information quickly."
+        />
+
+        <FeatureCard
+          label="Ownership"
+          title="True Website Control"
+          text="You keep control of your domain, hosting, content, and code repository."
         />
       </div>
     </div>
@@ -94,31 +86,100 @@ import CTA from '../components/CTA.astro';
   <section class="section">
     <div class="container">
       <SectionTitle
-        eyebrow="Industries"
-        title="Industry Cards"
-        text="Testing industry cards for the industries hub and homepage."
+        eyebrow="Who We Build For"
+        title="Built for businesses where trust matters."
+        text="We focus on professionals and small businesses that need reliable, polished websites without unnecessary technical complexity."
       />
 
       <div class="grid-3">
         <IndustryCard
           label="01 // Legal"
           title="Law Firms"
-          text="Professional sites designed around trust, clarity, and reliability."
+          text="Professional websites designed around credibility, clarity, and trust."
           href="/industries/law-firm-websites"
         />
 
         <IndustryCard
           label="02 // Wellness"
-          title="Therapists & Coaches"
-          text="Calm, professional sites that communicate services clearly."
+          title="Therapists & Wellness Professionals"
+          text="Calm, professional websites that communicate services clearly."
           href="/industries/therapist-websites"
         />
 
         <IndustryCard
-          label="03 // Consulting"
+          label="03 // Retreats"
+          title="Retreat Centers"
+          text="Content-focused websites for programs, retreats, and wellness organizations."
+          href="/industries/retreat-center-websites"
+        />
+
+        <IndustryCard
+          label="04 // Consulting"
           title="Consultants"
-          text="High-performance service pages for authority-driven businesses."
+          text="Authority-driven websites for advisors, consultants, and boutique firms."
           href="/industries/consulting-firm-websites"
+        />
+
+        <IndustryCard
+          label="05 // Clinics"
+          title="Medical & Dental Clinics"
+          text="Simple, reliable websites that help people find essential information quickly."
+          href="/industries/medical-clinic-websites"
+        />
+
+        <IndustryCard
+          label="06 // Design"
+          title="Architects & Artisans"
+          text="Elegant portfolio-style websites built for visual quality and fast performance."
+          href="/industries/architect-websites"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Essential Features"
+        title="Everything your business needs. Nothing it does not."
+        text="We build focused websites with practical features that support trust, clarity, and lead generation."
+      />
+
+      <div class="grid-3">
+        <FeatureCard
+          label="01 // Presence"
+          title="Professional Online Presence"
+          text="Clean, modern layouts tailored to your business and industry."
+        />
+
+        <FeatureCard
+          label="02 // Services"
+          title="Service-Focused Pages"
+          text="Structured pages that explain what you offer and help visitors take action."
+        />
+
+        <FeatureCard
+          label="03 // Contact"
+          title="Reliable Contact Forms"
+          text="Simple contact systems designed to help potential clients reach you easily."
+        />
+
+        <FeatureCard
+          label="04 // SEO"
+          title="SEO Foundations"
+          text="Metadata, heading structure, and clean page organization for search visibility."
+        />
+
+        <FeatureCard
+          label="05 // Mobile"
+          title="Mobile-First Design"
+          text="Responsive layouts built to work across desktops, tablets, and phones."
+        />
+
+        <FeatureCard
+          label="06 // Deploy"
+          title="Fast Hosting & Deployment"
+          text="Modern deployment workflows built for speed, reliability, and scalability."
         />
       </div>
     </div>
@@ -129,28 +190,78 @@ import CTA from '../components/CTA.astro';
   <section class="section">
     <div class="container">
       <SectionTitle
-        eyebrow="FAQ"
-        title="FAQ Items"
-        text="Testing FAQ components before building the full FAQ page."
+        eyebrow="Services Preview"
+        title="Simple packages for serious business websites."
+        text="Start with the level of support your business needs now, then grow from there."
       />
 
-      <FAQItem
-        question="Why not WordPress?"
-        answer="Many businesses do not need the complexity of a plugin-heavy platform. Static websites can reduce maintenance requirements and improve performance."
-      />
+      <div class="grid-2">
+        <ServiceCard
+          label="01 // Core Build"
+          title="The Core Build"
+          price="$800–$1,200 USD"
+          description="A clean 3–5 page static Astro website for businesses that need a strong online foundation."
+          items={[
+            'Responsive website',
+            'Contact form',
+            'Deployment setup',
+            'Basic SEO setup',
+          ]}
+        />
 
-      <FAQItem
-        question="Will I own my website?"
-        answer="Yes. Static Pulse Sites is built around the principle that clients should own their domain, hosting, content, and code."
-      />
+        <ServiceCard
+          label="02 // Basic Design"
+          title="Build + Basic Design"
+          price="$1,400–$1,800 USD"
+          description="A custom-coded site with simple visual direction, typography, layout polish, and image optimization."
+          items={[
+            'Everything in Core Build',
+            'Typography selection',
+            'Layout refinement',
+            'Visual polish',
+          ]}
+        />
+
+        <ServiceCard
+          label="03 // SEO"
+          title="Build + Approachable SEO"
+          price="$1,500–$2,000 USD"
+          description="A static website with foundational keyword structure, metadata, and local search basics."
+          highlighted={true}
+          items={[
+            'Everything in Core Build',
+            'Keyword optimization',
+            'Metadata',
+            'Search Console setup',
+          ]}
+        />
+
+        <ServiceCard
+          label="04 // Maintenance"
+          title="Hardened Maintenance"
+          price="$49–$99 USD / month"
+          description="Monthly care for businesses that want help with updates, monitoring, backups, and small content edits."
+          items={[
+            'Hosting management',
+            'Uptime monitoring',
+            'Regular backups',
+            'Up to 2 hours of edits',
+          ]}
+        />
+      </div>
+
+      <div class="button-row">
+        <a class="btn btn-primary" href="/services">View All Services</a>
+        <a class="btn btn-secondary" href="/contact">Request a Quote</a>
+      </div>
     </div>
   </section>
 
   <CTA
-    eyebrow="Final CTA"
-    title="Ready to build a website your business actually owns?"
-    text="This is a reusable CTA component that we can use across the entire site."
-    buttonText="Start Your Project"
+    eyebrow="Start Your Build"
+    title="Ready to leave the bloat behind?"
+    text="Build a fast, secure, custom-coded website your business actually owns."
+    buttonText="Build My Website"
     buttonHref="/contact"
   />
 </Layout>

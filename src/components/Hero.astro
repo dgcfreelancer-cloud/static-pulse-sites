@@ -11,7 +11,7 @@ const {
 ---
 
 <section class="hero-section">
-  <div class="container hero-grid">
+  <div class="container">
     <div class="hero-content">
       {eyebrow && <p class="eyebrow">{eyebrow}</p>}
 
@@ -21,23 +21,16 @@ const {
 
       <div class="button-row">
         {primaryText && primaryHref && (
-          <a class="btn btn-primary" href={primaryHref}>{primaryText}</a>
+          <a class="btn btn-primary" href={primaryHref}>
+            {primaryText}
+          </a>
         )}
 
         {secondaryText && secondaryHref && (
-          <a class="btn btn-secondary" href={secondaryHref}>{secondaryText}</a>
+          <a class="btn btn-secondary" href={secondaryHref}>
+            {secondaryText}
+          </a>
         )}
-      </div>
-    </div>
-
-    <div class="hero-panel" aria-hidden="true">
-      <div class="code-card">
-        <p class="code-label">STATIC // BUILD</p>
-        <pre><code>&lt;site&gt;
-  speed="fast"
-  plugins="none"
-  ownership="true"
-/&gt;</code></pre>
       </div>
     </div>
   </div>
