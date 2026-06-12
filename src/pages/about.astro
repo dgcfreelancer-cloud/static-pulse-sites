@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<Layout
+  title="About Static Pulse Sites | Founder Story"
+  description="Static Pulse Sites was created to help small and medium businesses build fast, secure, custom-coded websites they actually own."
+>
+  <section class="section">
+    <div class="container about-hero">
+      <div>
+        <p class="eyebrow">About // Static Pulse Sites</p>
+        <h1>Built from a real security problem, not a trend</h1>
+        <p class="lead hero-lead">
+          Static Pulse Sites was created after founder Daniela Carrion experienced firsthand what can happen when a website depends on vulnerable systems, plugins, and platforms you do not fully control.
+        </p>
+      </div>
+
+      <div class="about-photo-wrap">
+        <img
+          src="/images/ceo-photo.png"
+          alt="Daniela Carrion, founder of Static Pulse Sites"
+          class="about-photo"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Why It Exists"
+        title="A safer foundation for small business websites."
+        text="After a personal WordPress site was attacked, Daniela began learning how websites are structured, how static builds work, and why simpler architecture can reduce many common risks."
+      />
+
+      <div class="grid-3">
+        <FeatureCard
+          label="01 // Security"
+          title="Fewer moving parts"
+          text="Static Pulse Sites avoids unnecessary plugin dependency and focuses on clean, streamlined website architecture."
+        />
+
+        <FeatureCard
+          label="02 // Speed"
+          title="Fast by design"
+          text="Small and medium businesses need websites that load quickly, communicate clearly, and do not feel bloated."
+        />
+
+        <FeatureCard
+          label="03 // Ownership"
+          title="Built to belong to you"
+          text="Every business owner should understand and own the key parts of their website foundation."
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Our Philosophy"
+        title="We avoid bloated platforms because many businesses do not need them."
+        text="WordPress, Squarespace, and other website builders can be useful in the right context. But many professional businesses only need a fast, clear, secure informational website. For those businesses, simpler can be stronger."
+      />
+
+      <div class="grid-2">
+        <div class="card">
+          <p class="card-label">What We Build</p>
+          <h3>Simple static business websites</h3>
+          <p>
+            We focus on service pages, contact forms, local SEO foundations, professional presentation, and clean deployment.
+          </p>
+        </div>
+
+        <div class="card">
+          <p class="card-label">What We Avoid</p>
+          <h3>Unnecessary complexity</h3>
+          <p>
+            We do not start with plugins, dashboards, databases, or complex systems unless the business truly needs them.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Founder Story"
+        title="From hacked website to code-first business."
+        text="Daniela created Static Pulse Sites after realizing that many small business owners are sold websites they do not fully understand, fully own, or know how to protect."
+      />
+
+      <div class="card about-story">
+        <p>
+          After her own personal website was attacked while hosted on WordPress, Daniela began learning how websites work beneath the surface. That experience changed the way she thought about business websites completely.
+        </p>
+
+        <p>
+          Instead of relying on plugin-heavy systems or drag-and-drop platforms, she began learning static website methods, code-first workflows, GitHub, deployment, and modern tools like Astro.
+        </p>
+
+        <p>
+          Static Pulse Sites was created from that process: a website studio focused on helping small and medium businesses build professional websites that are fast, efficient, easier to maintain, and truly owned by the business.
+        </p>
+
+        <p>
+          The mission is simple: build websites with fewer unnecessary risks, cleaner structure, and more ownership for the people behind the business.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    eyebrow="Work With Static Pulse Sites"
+    title="Need a website that is simpler, faster, and easier to own?"
+    text="Tell us what your business needs, and we’ll recommend the cleanest path forward."
+    buttonText="Start Your Project"
+    buttonHref="/contact"
+  />
+</Layout>

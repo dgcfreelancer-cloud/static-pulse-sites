@@ -531,3 +531,43 @@ p {
       display: none;
     }
   }
+  /* PHASE 10 — ABOUT PAGE */
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-photo-wrap {
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--radius) + 10px);
+  padding: 0.75rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.015)
+  );
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.about-story {
+  max-width: 880px;
+}
+
+.about-story p + p {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+  }
+}
