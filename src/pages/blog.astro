@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import CTA from '../components/CTA.astro';
+
+const posts = [
+  {
+    label: '01 // Security',
+    title: 'Why WordPress Can Become a Security Liability for Small Businesses',
+    description:
+      'A practical look at WordPress security vulnerabilities, plugin dependency, and why static websites can offer a cleaner foundation for service businesses.',
+    href: '/blog/wordpress-security-vulnerabilities-small-business',
+  },
+  {
+    label: '02 // Ownership',
+    title: 'Beyond Templates: Why Renting Your Website Can Hurt Local Business SEO',
+    description:
+      'Why affordable custom web development can help small businesses improve performance, ownership, and long-term search visibility.',
+    href: '/blog/affordable-custom-web-development-small-business',
+  },
+];
+---
+
+<Layout
+  title="Blog | Static Pulse Sites"
+  description="Articles about static websites, WordPress alternatives, website ownership, SEO foundations, speed, and safer small business web architecture."
+>
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Blog // Website Strategy</p>
+      <h1>Clear thinking for faster, safer business websites.</h1>
+      <p class="lead hero-lead">
+        Practical articles for small business owners who want to understand website ownership, static architecture, WordPress alternatives, SEO foundations, and long-term web safety.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Latest Articles"
+        title="Start here."
+        text="These articles explain the core ideas behind Static Pulse Sites: fewer moving parts, faster performance, and stronger ownership."
+      />
+
+      <div class="grid-2">
+        {posts.map((post) => (
+          <a class="blog-card" href={post.href}>
+            <p class="card-label">{post.label}</p>
+            <h3>{post.title}</h3>
+            <p>{post.description}</p>
+            <span class="card-link">Read Article →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTA
+    eyebrow="Build With Clarity"
+    title="Need a simpler website foundation?"
+    text="Static Pulse Sites builds custom-coded websites for businesses that value speed, security, and ownership."
+    buttonText="View Services"
+    buttonHref="/services"
+  />
+</Layout>
