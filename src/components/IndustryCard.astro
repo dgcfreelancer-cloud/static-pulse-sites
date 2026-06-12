@@ -1,0 +1,15 @@
+---
+const {
+  label,
+  title,
+  text,
+  href,
+} = Astro.props;
+---
+
+<a class="industry-card" href={href}>
+  {label && <p class="card-label">{label}</p>}
+  <h3>{title}</h3>
+  {text && <p>{text}</p>}
+  <span class="card-link">Explore Industry →</span>
+</a>

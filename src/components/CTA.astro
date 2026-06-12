@@ -1,0 +1,23 @@
+---
+const {
+  eyebrow = 'Start Here',
+  title,
+  text,
+  buttonText = 'Contact Static Pulse Sites',
+  buttonHref = '/contact',
+} = Astro.props;
+---
+
+<section class="section">
+  <div class="container">
+    <div class="cta-box">
+      <p class="eyebrow">{eyebrow}</p>
+      <h2>{title}</h2>
+      {text && <p class="lead">{text}</p>}
+
+      <div class="button-row">
+        <a class="btn btn-primary" href={buttonHref}>{buttonText}</a>
+      </div>
+    </div>
+  </div>
+</section>

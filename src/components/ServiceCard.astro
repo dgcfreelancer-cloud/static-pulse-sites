@@ -1,0 +1,25 @@
+---
+const {
+  label,
+  title,
+  price,
+  description,
+  items = [],
+  highlighted = false,
+} = Astro.props;
+---
+
+<article class={`service-card ${highlighted ? 'service-card-highlighted' : ''}`}>
+  {label && <p class="card-label">{label}</p>}
+  <h3>{title}</h3>
+  {price && <p class="service-price">{price}</p>}
+  {description && <p>{description}</p>}
+
+  {items.length > 0 && (
+    <ul class="check-list">
+      {items.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  )}
+</article>

@@ -1,23 +1,156 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import IndustryCard from '../components/IndustryCard.astro';
+import FAQItem from '../components/FAQItem.astro';
+import OwnershipBlock from '../components/OwnershipBlock.astro';
+import CTA from '../components/CTA.astro';
 ---
 
 <Layout
   title="Static Pulse Sites | Custom-Coded Websites"
   description="Custom-coded websites for businesses that value simplicity, speed, and security."
 >
-  <section class="section page-test">
-    <div class="container">
-      <p class="eyebrow">Phase 3 // Global Layout</p>
-      <h1>Static Pulse Sites</h1>
-      <p class="lead">
-        Header, footer, global styles, and layout system are now connected.
-      </p>
+  <Hero
+    eyebrow="Phase 4 // Component Test"
+    title="Static Pulse Sites"
+    text="Reusable components are now connected and ready to build the full website."
+    primaryText="Contact"
+    primaryHref="/contact"
+    secondaryText="View Services"
+    secondaryHref="/services"
+  />
 
-      <div class="button-row">
-        <a class="btn btn-primary" href="/contact">Contact</a>
-        <a class="btn btn-secondary" href="/services">View Services</a>
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Feature Cards"
+        title="Everything Your Business Needs"
+        text="Testing reusable feature card components before building real pages."
+      />
+
+      <div class="grid-3">
+        <FeatureCard
+          label="01 // Speed"
+          title="Fast Performance"
+          text="Built with streamlined static architecture for fast loading and reliable delivery."
+        />
+
+        <FeatureCard
+          label="02 // Security"
+          title="Fewer Attack Surfaces"
+          text="No plugin dependency and less unnecessary complexity."
+        />
+
+        <FeatureCard
+          label="03 // Ownership"
+          title="True Ownership"
+          text="Your website assets remain under your control."
+        />
       </div>
     </div>
   </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Services"
+        title="Service Cards"
+        text="Testing pricing cards before building the services page."
+      />
+
+      <div class="grid-2">
+        <ServiceCard
+          label="01 // Core Build"
+          title="The Core Build"
+          price="$800–$1,200 USD"
+          description="A clean 3–5 page static website for businesses that need a professional online foundation."
+          items={[
+            'Responsive website',
+            'Contact form',
+            'Deployment setup',
+          ]}
+        />
+
+        <ServiceCard
+          label="03 // SEO"
+          title="Build + Approachable SEO"
+          price="$1,500–$2,000 USD"
+          description="A static website with SEO foundations for small businesses that want visibility."
+          highlighted={true}
+          items={[
+            'Metadata',
+            'Structured headings',
+            'Search Console setup',
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Industries"
+        title="Industry Cards"
+        text="Testing industry cards for the industries hub and homepage."
+      />
+
+      <div class="grid-3">
+        <IndustryCard
+          label="01 // Legal"
+          title="Law Firms"
+          text="Professional sites designed around trust, clarity, and reliability."
+          href="/industries/law-firm-websites"
+        />
+
+        <IndustryCard
+          label="02 // Wellness"
+          title="Therapists & Coaches"
+          text="Calm, professional sites that communicate services clearly."
+          href="/industries/therapist-websites"
+        />
+
+        <IndustryCard
+          label="03 // Consulting"
+          title="Consultants"
+          text="High-performance service pages for authority-driven businesses."
+          href="/industries/consulting-firm-websites"
+        />
+      </div>
+    </div>
+  </section>
+
+  <OwnershipBlock />
+
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="FAQ"
+        title="FAQ Items"
+        text="Testing FAQ components before building the full FAQ page."
+      />
+
+      <FAQItem
+        question="Why not WordPress?"
+        answer="Many businesses do not need the complexity of a plugin-heavy platform. Static websites can reduce maintenance requirements and improve performance."
+      />
+
+      <FAQItem
+        question="Will I own my website?"
+        answer="Yes. Static Pulse Sites is built around the principle that clients should own their domain, hosting, content, and code."
+      />
+    </div>
+  </section>
+
+  <CTA
+    eyebrow="Final CTA"
+    title="Ready to build a website your business actually owns?"
+    text="This is a reusable CTA component that we can use across the entire site."
+    buttonText="Start Your Project"
+    buttonHref="/contact"
+  />
 </Layout>
