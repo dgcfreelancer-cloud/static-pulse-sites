@@ -3,21 +3,32 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Business Systems Studio | Static Pulse Sites"
-  description="Static Pulse Sites designs websites, automates business workflows, and builds custom internal software for small and medium businesses."
+  title="Business Automation & Custom Systems for Small Businesses | Static Pulse Sites"
+  description="Static Pulse Sites provides business automation services, custom internal software, and website development for small and medium businesses."
 >
-  <main>
-    <section class="section">
-      <div class="container">
-        <h1>We design, automate, and build the systems your business runs on.</h1>
+  <main class="homepage">
+    <div class="homepage-banner" aria-hidden="true">
+      <img
+        src="/images/homepage-banner.jpg"
+        alt=""
+        width="1536"
+        height="1024"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
 
-        <p class="lead hero-lead">
-          Static Pulse Sites helps small and medium businesses improve their
-          websites, connect disconnected tools, reduce repetitive work, and
-          build focused internal software around the way they operate.
+    <section class="home-hero">
+      <div class="container home-hero-inner">
+        <h1>
+          Business Automation &amp; Custom Systems for Small Businesses
+        </h1>
+
+        <p class="brand-statement">
+          We design, automate, and build the systems your business runs on.
         </p>
 
-        <div class="button-row">
+        <div class="home-button-row">
           <a class="btn btn-primary" href="/contact">
             Start Your Project
           </a>
@@ -25,60 +36,66 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <section class="section">
+    <section class="home-section home-trust-section">
       <div class="container">
-        <div class="section-heading">
-          <h2>Technology should make your business simpler.</h2>
+        <div class="home-section-heading">
+          <h2>Technology should make your business simpler</h2>
 
-          <p class="lead">
+          <p>
             Every project is guided by a real person and designed around the
             business problem you need to solve. You do not need to understand
             programming, automation, or AI before contacting us.
           </p>
         </div>
 
-        <div class="grid-3">
-          <article class="card">
+        <div class="home-grid home-benefit-grid">
+          <article class="home-card">
             <h3>Human Guidance</h3>
+
             <p>
               We work with you to understand the business before recommending
               technology.
             </p>
           </article>
 
-          <article class="card">
+          <article class="home-card">
             <h3>Complete Ownership</h3>
+
             <p>
-              You retain ownership of your website, source code, software,
-              and business data.
+              You retain ownership of your website, source code, software, and
+              business data.
             </p>
           </article>
 
-          <article class="card">
+          <article class="home-card">
             <h3>Practical Solutions</h3>
+
             <p>
               We use the simplest system that can solve the problem properly.
             </p>
           </article>
 
-          <article class="card">
+          <article class="home-card">
             <h3>Connected Operations</h3>
+
             <p>
               Websites, forms, email, project tools, and internal systems can
               work together.
             </p>
           </article>
 
-          <article class="card">
+          <article class="home-card">
             <h3>Security by Design</h3>
+
             <p>
-              We reduce unnecessary dependencies and avoid adding complexity
-              that creates additional risk.
+              We reduce unnecessary dependencies and avoid complexity that
+              creates additional risk.
             </p>
           </article>
 
-          <article class="card">
+          <article class="home-card">
             <h3>Built to Adapt</h3>
+
             <p>
               Your systems can evolve as your processes, team, and business
               requirements change.
@@ -88,114 +105,85 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <section class="section">
+    <section class="home-section home-services-section">
       <div class="container">
-        <div class="section-heading">
-          <h2>Built for businesses ready to modernize without adding more complexity.</h2>
+        <div class="home-section-heading home-section-heading-wide">
+          <h2>
+            Three connected ways to improve how your business operates
+          </h2>
 
-          <p class="lead">
-            We work with small and medium businesses that have outgrown manual
-            processes, disconnected tools, fragile websites, or generic
-            software that does not match the way their teams work.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <h2>How the process works.</h2>
-        </div>
-
-        <ol class="process-list">
-          <li>
-            <strong>Get in touch.</strong>
-            Tell us what is not working or what you want to improve.
-          </li>
-
-          <li>
-            <strong>Understand the business.</strong>
-            We review your goals, processes, current tools, and constraints.
-          </li>
-
-          <li>
-            <strong>Design the solution.</strong>
-            We recommend the simplest practical approach.
-          </li>
-
-          <li>
-            <strong>Build and iterate.</strong>
-            We build the system and refine it with your feedback.
-          </li>
-
-          <li>
-            <strong>Launch and improve.</strong>
-            We help you put it into use and make improvements as needed.
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Three connected ways to improve how your business operates.</h2>
-
-          <p class="lead">
+          <p>
             Each service can solve a focused problem independently or become
             part of a larger business system.
           </p>
         </div>
 
-        <div class="grid-3">
-          <article class="card">
-            <h3>Website Development</h3>
+        <div class="home-grid home-services-grid">
+          <a
+            class="home-card home-service-card"
+            href="/services/website-development"
+            aria-label="Explore custom website development for small businesses"
+          >
+            <div>
+              <h3>Website Development</h3>
 
-            <p>
-              Fast, secure websites that support your customer journey and
-              connect with the systems behind your business.
-            </p>
+              <p>
+                Fast, secure websites that support your customer journey and
+                connect with the systems behind your business.
+              </p>
+            </div>
 
-            <p><strong>Starting at $1,200</strong></p>
+            <div class="service-card-footer">
+              <p class="service-price">Starting at $1,500</p>
 
-            <a class="text-link" href="/services/website-development">
-              Explore Website Development →
-            </a>
-          </article>
+              <span>Explore Website Development →</span>
+            </div>
+          </a>
 
-          <article class="card">
-            <h3>AI Systems &amp; Automation</h3>
+          <a
+            class="home-card home-service-card"
+            href="/services/ai-systems-automation"
+            aria-label="Explore AI automation services for small businesses"
+          >
+            <div>
+              <h3>AI Systems &amp; Automation</h3>
 
-            <p>
-              Connected workflows that reduce repetitive work and help
-              information move reliably between your existing tools.
-            </p>
+              <p>
+                Connected workflows that reduce repetitive work and help
+                information move reliably between your existing tools.
+              </p>
+            </div>
 
-            <p><strong>Starting at $1,000</strong></p>
+            <div class="service-card-footer">
+              <p class="service-price">Starting at $1,500</p>
 
-            <a class="text-link" href="/services/ai-systems-automation">
-              Explore AI Systems &amp; Automation →
-            </a>
-          </article>
+              <span>Explore AI Systems &amp; Automation →</span>
+            </div>
+          </a>
 
-          <article class="card">
-            <h3>Custom Internal Software</h3>
+          <a
+            class="home-card home-service-card"
+            href="/services/custom-internal-software"
+            aria-label="Explore custom internal software development"
+          >
+            <div>
+              <h3>Custom Internal Software</h3>
 
-            <p>
-              Focused internal tools designed around the way your team manages
-              clients, projects, documents, and operations.
-            </p>
+              <p>
+                Focused internal tools designed around the way your team
+                manages clients, projects, documents, and operations.
+              </p>
+            </div>
 
-            <p><strong>Starting at $2,500</strong></p>
+            <div class="service-card-footer">
+              <p class="service-price">Starting at $2,000</p>
 
-            <a class="text-link" href="/services/custom-internal-software">
-              Explore Custom Internal Software →
-            </a>
-          </article>
+              <span>Explore Custom Internal Software →</span>
+            </div>
+          </a>
         </div>
 
-        <div class="button-row">
+        <div class="home-button-row home-pricing-button">
           <a class="btn btn-primary" href="/pricing">
             View Pricing
           </a>
@@ -203,18 +191,89 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </section>
 
-    <section class="section">
+    <section class="home-section home-process-section">
       <div class="container">
-        <div class="cta-box">
+        <div class="home-section-heading">
+          <h2>How the process works</h2>
+        </div>
+
+        <ol class="home-process-list">
+          <li>
+            <span class="process-number">01</span>
+
+            <div>
+              <h3>Get in touch</h3>
+
+              <p>
+                Tell us what is not working or what you want to improve.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="process-number">02</span>
+
+            <div>
+              <h3>Understand the business</h3>
+
+              <p>
+                We review your goals, processes, current tools, and
+                constraints.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="process-number">03</span>
+
+            <div>
+              <h3>Design the solution</h3>
+
+              <p>
+                We recommend the simplest practical approach for the problem.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="process-number">04</span>
+
+            <div>
+              <h3>Build and iterate</h3>
+
+              <p>
+                We build the system and refine it using your feedback.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="process-number">05</span>
+
+            <div>
+              <h3>Launch and improve</h3>
+
+              <p>
+                We help you put the system into use and improve it as needed.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="home-section home-final-section">
+      <div class="container">
+        <div class="home-final-cta">
           <h2>What is slowing your business down?</h2>
 
-          <p class="lead">
+          <p>
             Tell us about the process, website, or internal system you want to
             improve. You do not need to know which service or technology you
             need before getting in touch.
           </p>
 
-          <div class="button-row">
+          <div class="home-button-row">
             <a class="btn btn-primary" href="/contact">
               Start Your Project
             </a>
@@ -224,3 +283,315 @@ import Layout from '../layouts/Layout.astro';
     </section>
   </main>
 </Layout>
+
+<style>
+  .homepage {
+    overflow: hidden;
+  }
+
+  .homepage-banner {
+    width: 100%;
+    height: clamp(170px, 18vw, 230px);
+    overflow: hidden;
+    border-bottom: 1px solid
+      var(--color-border, rgba(255, 255, 255, 0.12));
+  }
+
+  .homepage-banner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 48%;
+  }
+
+  .home-hero {
+    padding: clamp(3.25rem, 5vw, 5rem) 0
+      clamp(2.75rem, 4vw, 4rem);
+  }
+
+  .home-hero-inner {
+    max-width: 1120px;
+    text-align: center;
+  }
+
+  .home-hero h1 {
+    max-width: 980px;
+    margin: 0 auto;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+
+  .brand-statement {
+    max-width: 900px;
+    margin: 1.75rem auto 0;
+    font-family: var(--font-heading, inherit);
+    font-size: clamp(1rem, 2.2vw, 2rem);
+    line-height: 1.3;
+    color: var(--color-text, #ffffff);
+    text-wrap: balance;
+  }
+
+  .home-button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .home-section {
+    padding: clamp(2.5rem, 3.5vw, 3.75rem) 0;
+  }
+
+  .home-trust-section,
+  .home-audience-section,
+  .home-process-section,
+  .home-services-section {
+    padding-top: clamp(2.5rem, 3.5vw, 3.75rem);
+    padding-bottom: clamp(2.5rem, 3.5vw, 3.75rem);
+  }
+
+  .home-final-section {
+    padding-top: clamp(2.25rem, 3vw, 3.25rem);
+    padding-bottom: clamp(3rem, 4vw, 4rem);
+  }
+
+  .home-section-heading {
+    max-width: 100%;
+    margin: 0 auto clamp(2.5rem, 3.5vw, 3.5rem);
+    text-align: center;
+  }
+
+  .home-section-heading h2 {
+    max-width: 1050px;
+    margin: 0 auto;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  .home-section-heading p {
+    max-width: 850px;
+    margin: 1.15rem auto 0;
+    font-size: clamp(0.95rem, 1.1vw, 1.08rem);
+    line-height: 1.65;
+    color: var(--color-text-muted, #aeb8c9);
+  }
+
+  .home-section-heading-wide {
+    max-width: 100%;
+  }
+
+  .home-grid {
+    display: grid;
+    gap: clamp(1.2rem, 2vw, 1.75rem);
+  }
+
+  .home-benefit-grid,
+  .home-services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .home-card {
+    min-width: 0;
+    padding: clamp(1.6rem, 2.5vw, 2.25rem);
+    border: 1px solid
+      var(--color-border, rgba(255, 255, 255, 0.14));
+    border-radius: 24px;
+    background: var(
+      --color-surface,
+      rgba(255, 255, 255, 0.025)
+    );
+  }
+
+  .home-card h3 {
+    margin: 0;
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+  }
+
+  .home-card p {
+    margin: 0.85rem 0 0;
+    font-size: clamp(0.96rem, 1vw, 1.08rem);
+    line-height: 1.55;
+    color: var(--color-text-muted, #aeb8c9);
+  }
+
+  .home-process-list {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid
+      var(--color-border, rgba(255, 255, 255, 0.14));
+  }
+
+  .home-process-list li {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+    padding: 1.4rem 0;
+    border-bottom: 1px solid
+      var(--color-border, rgba(255, 255, 255, 0.14));
+  }
+
+  .process-number {
+    padding-top: 0.2rem;
+    font-family: monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    color: var(--color-accent, #18b9d7);
+  }
+
+  .home-process-list h3 {
+    margin: 0;
+  }
+
+  .home-process-list p {
+    margin: 0.5rem 0 0;
+    color: var(--color-text-muted, #aeb8c9);
+    line-height: 1.55;
+  }
+
+  .home-service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.25rem;
+    min-height: 100%;
+    color: inherit;
+    text-decoration: none;
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease,
+      background-color 180ms ease;
+  }
+
+  .home-service-card:hover,
+  .home-service-card:focus-visible {
+    transform: translateY(-4px);
+    border-color: var(--color-accent, #18b9d7);
+    background: rgba(24, 185, 215, 0.055);
+  }
+
+  .home-service-card:focus-visible {
+    outline: 3px solid rgba(24, 185, 215, 0.35);
+    outline-offset: 4px;
+  }
+
+  .service-card-footer {
+    padding-top: 1.4rem;
+    border-top: 1px solid
+      var(--color-border, rgba(255, 255, 255, 0.14));
+  }
+
+  .service-card-footer .service-price {
+    margin: 0 0 1rem;
+    font-weight: 700;
+    color: var(--color-text, #ffffff);
+  }
+
+  .service-card-footer span {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-accent, #18b9d7);
+  }
+
+  .home-pricing-button {
+    margin-top: clamp(2.25rem, 3.5vw, 3.25rem);
+  }
+
+  .home-final-cta {
+    padding: clamp(2rem, 5vw, 4.25rem);
+    text-align: center;
+    border: 1px solid
+      var(--color-border, rgba(255, 255, 255, 0.14));
+    border-radius: 28px;
+    background: var(
+      --color-surface,
+      rgba(255, 255, 255, 0.025)
+    );
+  }
+
+  .home-final-cta h2 {
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  .home-final-cta > p {
+    max-width: 800px;
+    margin: 1.15rem auto 0;
+    font-size: clamp(0.95rem, 1.1vw, 1.08rem);
+    line-height: 1.65;
+    color: var(--color-text-muted, #aeb8c9);
+  }
+
+  @media (max-width: 900px) {
+    .home-benefit-grid,
+    .home-services-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 640px) {
+    .homepage-banner {
+      height: 150px;
+    }
+
+    .home-hero {
+      padding-top: 3rem;
+      padding-bottom: 2.75rem;
+    }
+
+    .brand-statement {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+    }
+
+    .home-benefit-grid,
+    .home-services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .home-section,
+    .home-trust-section,
+    .home-audience-section,
+    .home-process-section,
+    .home-services-section {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .home-final-section {
+      padding-top: 2.25rem;
+      padding-bottom: 3rem;
+    }
+
+    .home-section-heading {
+      margin-bottom: 2.15rem;
+    }
+
+    .home-process-list li {
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .home-card {
+      border-radius: 20px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-service-card {
+      transition: none;
+    }
+
+    .home-service-card:hover {
+      transform: none;
+    }
+  }
+</style>
