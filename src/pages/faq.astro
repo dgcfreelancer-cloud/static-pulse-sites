@@ -7,14 +7,16 @@ import FAQItem from '../components/FAQItem.astro';
   title="FAQ | Static Pulse Sites"
   description="Answers about website development, AI systems, automation, custom internal software, pricing, ownership, and the Static Pulse Sites process."
 >
-  <main>
-    <section class="section">
-      <div class="container">
-        <h1>Questions about working with Static Pulse Sites.</h1>
+  <main class="faq-page">
 
-        <p class="lead hero-lead">
+    <section class="faq-hero">
+      <div class="container faq-hero-content">
+
+        <h1>Questions about working with Static Pulse Sites</h1>
+
+        <p class="hero-lead">
           You do not need to understand software, automation, or AI before
-          contacting us. Start with the business problem, and we will help
+          contacting us. Start with the business problem, and we'll help
           identify the most practical next step.
         </p>
 
@@ -23,141 +25,176 @@ import FAQItem from '../components/FAQItem.astro';
             Start Your Project
           </a>
         </div>
+
       </div>
     </section>
 
-    <section class="section">
+    <section class="faq-section">
       <div class="container">
-        <h2>Services and project fit</h2>
 
-        <FAQItem
-          question="What does Static Pulse Sites do?"
-          answer="Static Pulse Sites is a Business Systems Studio. We help small and medium businesses improve their websites, connect disconnected tools, automate repetitive work, and build focused internal software."
-        />
+        <div class="faq-section-heading">
+          <h2>Services and project fit</h2>
+        </div>
 
-        <FAQItem
-          question="How do I know which service I need?"
-          answer="You do not need to decide that before contacting us. Explain the process, website, or operational problem you want to improve. We will review the situation and recommend the simplest appropriate solution."
-        />
+        <div class="faq-group">
 
-        <FAQItem
-          question="Can the three services be combined?"
-          answer="Yes. A project may involve only one service, or it may combine a website, automation, and internal software. For example, a website form could send information into an automated workflow and then update an internal client-management system."
-        />
+          <FAQItem
+            question="What does Static Pulse Sites do?"
+            answer="Static Pulse Sites is a Business Systems Studio. We help small and medium businesses improve their websites, connect disconnected tools, automate repetitive work, and build focused internal software."
+          />
 
-        <FAQItem
-          question="Do you work with specific industries?"
-          answer="No. We work with small and medium businesses based on the problems they need to solve rather than their industry."
-        />
+          <FAQItem
+            question="How do I know which service I need?"
+            answer="You do not need to decide that before contacting us. Explain the process, website, or operational problem you want to improve. We will review the situation and recommend the simplest appropriate solution."
+          />
 
-        <FAQItem
-          question="What kinds of projects are not a good fit?"
-          answer="We are not currently focused on large enterprise platforms, mass-market consumer applications, complex e-commerce ecosystems, or projects that require replacing an entire established software infrastructure."
-        />
+          <FAQItem
+            question="Can the three services be combined?"
+            answer="Yes. A project may involve only one service, or it may combine a website, automation, and internal software."
+          />
+
+          <FAQItem
+            question="Do you work with specific industries?"
+            answer="No. We work with small and medium businesses based on the problems they need to solve rather than their industry."
+          />
+
+          <FAQItem
+            question="What kinds of projects are not a good fit?"
+            answer="We are not currently focused on large enterprise platforms, mass-market consumer applications, complex e-commerce ecosystems, or projects that require replacing an entire established software infrastructure."
+          />
+
+        </div>
+
       </div>
     </section>
 
-    <section class="section">
+    <section class="faq-section alt">
       <div class="container">
-        <h2>Process and collaboration</h2>
 
-        <FAQItem
-          question="Do I need technical knowledge?"
-          answer="No. Our role is to translate the business problem into a practical technical solution. We explain decisions clearly and guide the project without expecting you to understand programming, APIs, automation platforms, or AI models."
-        />
+        <div class="faq-section-heading">
+          <h2>Process and collaboration</h2>
+        </div>
 
-        <FAQItem
-          question="How does a project begin?"
-          answer="Projects begin through the contact form. Tell us about your business, the current process or system, and what you want to improve. We will review the information and respond by email with the appropriate next steps."
-        />
+        <div class="faq-group">
 
-        <FAQItem
-          question="Will I be involved during the build?"
-          answer="Yes. Projects are collaborative. We confirm the problem, review the proposed solution, and gather your feedback during the build instead of waiting until the end."
-        />
+          <FAQItem
+            question="Do I need technical knowledge?"
+            answer="No. Our role is to translate the business problem into a practical technical solution."
+          />
 
-        <FAQItem
-          question="How long does a project take?"
-          answer="The timeline depends on the scope. A focused website or automation may take a few weeks, while custom software with multiple users, workflows, or integrations may require a longer phased build. The expected timeline is confirmed before work begins."
-        />
+          <FAQItem
+            question="How does a project begin?"
+            answer="Projects begin through the contact form. Tell us about your business, the current process or system, and what you want to improve."
+          />
 
-        <FAQItem
-          question="Do you provide ongoing support?"
-          answer="Yes, when required. Support can include website maintenance, workflow monitoring, small improvements, troubleshooting, and continued software development. The support arrangement depends on the system and the level of ongoing involvement needed."
-        />
+          <FAQItem
+            question="Will I be involved during the build?"
+            answer="Yes. Projects are collaborative. We gather feedback throughout the build instead of waiting until the end."
+          />
+
+          <FAQItem
+            question="How long does a project take?"
+            answer="The timeline depends on the scope. A focused website or automation may take a few weeks, while larger custom software projects may require a phased build."
+          />
+
+          <FAQItem
+            question="Do you provide ongoing support?"
+            answer="Yes. Support can include website maintenance, workflow monitoring, software improvements, troubleshooting, and continued development."
+          />
+
+        </div>
+
       </div>
     </section>
 
-    <section class="section">
+    <section class="faq-section">
       <div class="container">
-        <h2>Pricing and ownership</h2>
 
-        <FAQItem
-          question="How much does a project cost?"
-          answer="Website Development starts at $1,200, AI Systems and Automation starts at $1,000, and Custom Internal Software starts at $2,500. Final pricing depends on the scope, users, features, platforms, integrations, and level of support required."
-        />
+        <div class="faq-section-heading">
+          <h2>Pricing and ownership</h2>
+        </div>
 
-        <FAQItem
-          question="Why do you show starting prices instead of fixed packages?"
-          answer="Automation and software projects vary significantly. Starting prices help visitors understand the general investment level, while the final quote reflects the actual business problem and work required."
-        />
+        <div class="faq-group">
 
-        <FAQItem
-          question="Will I own what you build?"
-          answer="Yes. Ownership is a core principle of Static Pulse Sites. Clients retain ownership of their website, source code, custom software, and business data, subject to any separate third-party platform terms."
-        />
+          <FAQItem
+            question="How much does a project cost?"
+            answer="Website Development starts at $1,500, AI Systems & Automation starts at $1,500, and Custom Internal Software starts at $2,000. Final pricing depends on project scope."
+          />
 
-        <FAQItem
-          question="Will I be locked into Static Pulse Sites?"
-          answer="No. We want clients to continue working with us because the relationship is useful, not because the system prevents them from leaving. The project structure and ownership model are designed to reduce unnecessary vendor lock-in."
-        />
+          <FAQItem
+            question="Why do you show starting prices instead of fixed packages?"
+            answer="Every business is different. Starting prices communicate the general investment while allowing us to tailor each proposal."
+          />
 
-        <FAQItem
-          question="Will I need to pay for third-party tools?"
-          answer="Possibly. Some projects require hosting, automation platforms, databases, AI services, email tools, or other software subscriptions. These costs are identified during planning so you understand which expenses belong to third-party services and which belong to Static Pulse Sites."
-        />
+          <FAQItem
+            question="Will I own what you build?"
+            answer="Yes. Clients retain ownership of their website, software, source code, and business data."
+          />
+
+          <FAQItem
+            question="Will I be locked into Static Pulse Sites?"
+            answer="No. Our goal is to create systems you own and understand—not systems that force you to remain with us."
+          />
+
+          <FAQItem
+            question="Will I need third-party subscriptions?"
+            answer="Possibly. Hosting, automation platforms, AI services, databases, or email providers may have their own subscription costs."
+          />
+
+        </div>
+
       </div>
     </section>
 
-    <section class="section">
+    <section class="faq-section alt">
       <div class="container">
-        <h2>Websites, AI, and software</h2>
 
-        <FAQItem
-          question="Do you only build static websites?"
-          answer="Static architecture remains our preferred approach for many informational websites because it is fast, reliable, and low maintenance. However, the correct website structure depends on the business requirements and any forms, portals, integrations, or dynamic features involved."
-        />
+        <div class="faq-section-heading">
+          <h2>Websites, AI and software</h2>
+        </div>
 
-        <FAQItem
-          question="Do you add AI to every project?"
-          answer="No. AI is used only when it provides practical value. Many problems are better solved with clear processes, straightforward automation, or traditional software."
-        />
+        <div class="faq-group">
 
-        <FAQItem
-          question="Can you connect tools we already use?"
-          answer="Yes, when the tools support suitable integrations or APIs. We review your existing platforms before recommending replacements because the simplest solution is often to improve how current systems work together."
-        />
+          <FAQItem
+            question="Do you only build static websites?"
+            answer="Static websites remain our preferred solution for many businesses because they are fast, secure, and low maintenance. However, every project is evaluated individually."
+          />
 
-        <FAQItem
-          question="Can you build a custom CRM or portal?"
-          answer="Yes. We build focused internal systems such as CRMs, client portals, onboarding tools, dashboards, document systems, and operational trackers when existing software does not support the process cleanly."
-        />
+          <FAQItem
+            question="Do you add AI to every project?"
+            answer="No. AI is only introduced when it provides practical value."
+          />
 
-        <FAQItem
-          question="Is any website or software completely secure?"
-          answer="No responsible provider should promise absolute security. We reduce unnecessary dependencies, apply appropriate safeguards, and design systems with security in mind, but every system still requires proper access controls, configuration, maintenance, and responsible use."
-        />
+          <FAQItem
+            question="Can you connect tools we already use?"
+            answer="Yes, whenever the platforms provide suitable APIs or integrations."
+          />
+
+          <FAQItem
+            question="Can you build a custom CRM or portal?"
+            answer="Yes. We build CRMs, dashboards, onboarding systems, client portals, document systems, and other internal software."
+          />
+
+          <FAQItem
+            question="Is any software completely secure?"
+            answer="No. We build with security in mind and reduce unnecessary risk, but no responsible provider can guarantee absolute security."
+          />
+
+        </div>
+
       </div>
     </section>
 
-    <section class="section">
+    <section class="faq-final">
       <div class="container">
-        <div class="cta-box">
+
+        <div class="faq-cta">
+
           <h2>Still unsure where to begin?</h2>
 
-          <p class="lead">
-            Describe what is not working, what your team currently uses, and
-            what you want the business to do more efficiently.
+          <p>
+            Describe what's slowing your business down and we'll help determine
+            the simplest solution.
           </p>
 
           <div class="button-row">
@@ -165,8 +202,111 @@ import FAQItem from '../components/FAQItem.astro';
               Start Your Project
             </a>
           </div>
+
         </div>
+
       </div>
     </section>
+
   </main>
 </Layout>
+
+<style>
+.faq-page{
+    overflow:hidden;
+}
+
+.faq-hero{
+    padding:3.5rem 0 2.5rem;
+}
+
+.faq-hero-content{
+    max-width:900px;
+    text-align:center;
+}
+
+.faq-hero-content h1{
+    max-width:850px;
+    margin:0 auto;
+}
+
+.faq-hero-content p{
+    max-width:760px;
+    margin:1.2rem auto 0;
+    line-height:1.7;
+    font-size:1.1rem;
+}
+
+.button-row{
+    display:flex;
+    justify-content:center;
+    margin-top:1.8rem;
+}
+
+.faq-section{
+    padding:2.75rem 0;
+}
+
+.faq-section.alt{
+    background:rgba(255,255,255,.018);
+    border-top:1px solid var(--color-border);
+    border-bottom:1px solid var(--color-border);
+}
+
+.faq-section-heading{
+    text-align:center;
+    margin-bottom:2.25rem;
+}
+
+.faq-section-heading h2{
+    margin:0;
+}
+
+.faq-group{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-final{
+    padding:2.5rem 0 4rem;
+}
+
+.faq-cta{
+    max-width:1000px;
+    margin:auto;
+    text-align:center;
+
+    padding:3rem;
+
+    border:1px solid var(--color-border);
+    border-radius:28px;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(6,182,212,.10),
+    transparent 38%),
+    linear-gradient(
+    180deg,
+    rgba(255,255,255,.04),
+    rgba(255,255,255,.015));
+}
+
+.faq-cta p{
+    max-width:700px;
+    margin:1rem auto 0;
+    line-height:1.7;
+}
+
+@media(max-width:768px){
+
+.faq-section{
+    padding:2.25rem 0;
+}
+
+.faq-cta{
+    padding:2rem 1.5rem;
+    border-radius:22px;
+}
+
+}
+</style>
