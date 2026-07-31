@@ -3,105 +3,119 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Business Systems Services | Static Pulse Sites"
-  description="Explore website development, AI systems and automation, and custom internal software for small and medium businesses."
+  title="Business Process Automation & Custom Software Services | Static Pulse Sites"
+  description="Explore website development, AI systems and automation, and custom internal software built for small and medium businesses."
 >
-  <main>
-    <section class="section">
+  <main class="services-page">
+    <section class="services-hero">
       <div class="container">
-        <h1>Business systems built around the way your company works.</h1>
+        <div class="image-band">
+          <div class="image-band-copy">
+            <h1>Business systems built around the way your company works</h1>
 
-        <p class="lead hero-lead">
-          Static Pulse Sites helps small and medium businesses improve their
-          public-facing websites, automate repetitive processes, and build
-          focused internal software when existing tools are not enough.
-        </p>
+            <p class="lead hero-lead">
+              Static Pulse Sites helps small and medium businesses improve their
+              public-facing websites, automate repetitive processes, and build
+              focused internal software when existing tools are not enough.
+            </p>
 
-        <div class="button-row">
-          <a class="btn btn-primary" href="/contact">
-            Start Your Project
+            <div class="button-row">
+              <a class="btn btn-primary" href="/contact">
+                Start Your Project
+              </a>
+            </div>
+          </div>
+
+          <div class="image-band-frame">
+            <img
+              src="/images/custom-coded-website-workspace.jpg"
+              alt="Custom-coded website development workspace"
+              loading="eager"
+              width="1536"
+              height="1024"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div class="container">
+        <div class="services-heading">
+          <h2>Three connected ways to improve your business</h2>
+
+          <p>
+            Each service can stand alone or become part of a larger system. We
+            recommend the simplest solution that addresses the problem.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <a
+            class="service-option"
+            href="/services/website-development"
+            aria-label="Explore custom website development for small businesses"
+          >
+            <div>
+              <h3>Website Development</h3>
+
+              <p>
+                Fast, secure websites that support your customer journey and
+                connect with the tools behind your business.
+              </p>
+            </div>
+
+            <span>Explore Website Development →</span>
+          </a>
+
+          <a
+            class="service-option"
+            href="/services/ai-systems-automation"
+            aria-label="Explore AI automation services for small businesses"
+          >
+            <div>
+              <h3>AI Systems &amp; Automation</h3>
+
+              <p>
+                Practical workflows that connect your existing platforms and
+                reduce repetitive manual work.
+              </p>
+            </div>
+
+            <span>Explore AI Systems &amp; Automation →</span>
+          </a>
+
+          <a
+            class="service-option"
+            href="/services/custom-internal-software"
+            aria-label="Explore custom internal software development"
+          >
+            <div>
+              <h3>Custom Internal Software</h3>
+
+              <p>
+                Focused internal tools designed around the way your team manages
+                clients, information, projects, and operations.
+              </p>
+            </div>
+
+            <span>Explore Custom Internal Software →</span>
           </a>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="services-final-section">
       <div class="container">
-        <div class="section-heading">
-          <h2>Three connected ways to improve your business.</h2>
-
-          <p class="lead">
-            Each service can stand alone or become part of a larger system.
-            We recommend the simplest solution that addresses the problem.
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>Website Development</h3>
-
-            <p>
-              Fast, secure websites that support your customer journey and
-              connect with the tools behind your business.
-            </p>
-
-            <a
-              class="text-link"
-              href="/services/website-development"
-              aria-label="Explore Website Development"
-            >
-              Explore Website Development →
-            </a>
-          </article>
-
-          <article class="card">
-            <h3>AI Systems &amp; Automation</h3>
-
-            <p>
-              Practical workflows that connect your existing platforms and
-              reduce repetitive manual work.
-            </p>
-
-            <a
-              class="text-link"
-              href="/services/ai-systems-automation"
-              aria-label="Explore AI Systems and Automation"
-            >
-              Explore AI Systems &amp; Automation →
-            </a>
-          </article>
-
-          <article class="card">
-            <h3>Custom Internal Software</h3>
-
-            <p>
-              Focused internal tools designed around the way your team manages
-              clients, information, projects, and operations.
-            </p>
-
-            <a
-              class="text-link"
-              href="/services/custom-internal-software"
-              aria-label="Explore Custom Internal Software"
-            >
-              Explore Custom Internal Software →
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="cta-box">
+        <div class="services-final-cta">
           <h2>Not sure which service fits the problem?</h2>
 
-          <p class="lead">
+          <p>
             Tell us what is slowing your business down. You do not need to know
             which technology or service you need before contacting us.
           </p>
 
-          <div class="button-row">
+          <div class="services-button-row">
             <a class="btn btn-primary" href="/contact">
               Start Your Project
             </a>
@@ -111,3 +125,209 @@ import Layout from '../layouts/Layout.astro';
     </section>
   </main>
 </Layout>
+
+<style>
+  .services-page {
+    overflow: hidden;
+  }
+
+  .services-hero {
+    padding: clamp(3rem, 4vw, 4.5rem) 0;
+  }
+
+  .services-hero .image-band {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.services-hero .image-band-frame {
+  width: 100%;
+  height: clamp(340px, 32vw, 460px);
+  padding: 0.75rem;
+  overflow: hidden;
+}
+
+.services-hero .image-band-frame img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius);
+}
+
+  .image-band-copy h1 {
+    max-width: 680px;
+  }
+
+  .image-band-copy .hero-lead {
+    max-width: 650px;
+    margin-top: 1.25rem;
+  }
+
+  .image-band-copy .button-row {
+    margin-top: 1.75rem;
+  }
+
+  .services-section {
+    padding: clamp(2.75rem, 4vw, 4rem) 0;
+  }
+
+  .services-heading {
+    max-width: 950px;
+    margin: 0 auto clamp(2.5rem, 3.5vw, 3.5rem);
+    text-align: center;
+  }
+
+  .services-heading h2 {
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .services-heading p {
+    max-width: 760px;
+    margin: 1.15rem auto 0;
+    line-height: 1.65;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.2rem, 2vw, 1.75rem);
+  }
+
+  .service-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    min-width: 0;
+    min-height: 100%;
+    padding: clamp(1.6rem, 2.5vw, 2.25rem);
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid var(--color-border);
+    border-radius: 24px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.015)
+    );
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease,
+      background-color 180ms ease;
+  }
+
+  .service-option:hover,
+  .service-option:focus-visible {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+    background: rgba(24, 185, 215, 0.055);
+  }
+
+  .service-option:focus-visible {
+    outline: 3px solid rgba(24, 185, 215, 0.35);
+    outline-offset: 4px;
+  }
+
+  .service-option h3 {
+    margin: 0;
+  }
+
+  .service-option p {
+    margin-top: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .service-option span {
+    padding-top: 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--color-accent);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .services-final-section {
+    padding: clamp(2.25rem, 3vw, 3.25rem) 0
+      clamp(3rem, 4vw, 4rem);
+  }
+
+  .services-final-cta {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: clamp(2.25rem, 4vw, 3.5rem);
+    text-align: center;
+    border: 1px solid var(--color-border);
+    border-radius: 28px;
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(6, 182, 212, 0.12),
+        transparent 38%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.045),
+        rgba(255, 255, 255, 0.015)
+      );
+  }
+
+  .services-final-cta h2 {
+    max-width: 850px;
+    margin: 0 auto;
+    text-wrap: balance;
+  }
+
+  .services-final-cta > p {
+    max-width: 760px;
+    margin: 1rem auto 0;
+    line-height: 1.65;
+  }
+
+  .services-button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.6rem;
+  }
+
+  @media (max-width: 900px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .services-hero,
+    .services-section {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .services-final-section {
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+    }
+
+    .services-final-cta {
+      padding: 2rem 1.25rem;
+      border-radius: 22px;
+    }
+
+    .service-option {
+      border-radius: 20px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .service-option {
+      transition: none;
+    }
+
+    .service-option:hover {
+      transform: none;
+    }
+  }
+</style>

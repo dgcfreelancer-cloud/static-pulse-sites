@@ -104,29 +104,54 @@ p {
   margin-top: 2rem;
 }
 
+/* BUTTONS */
+
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  padding: 0.9rem 1.25rem;
+  padding: 0.9rem 1.4rem;
+
   font-family: var(--font-mono);
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+
   border: 1px solid var(--color-border);
-  transition: 0.2s ease;
+
+  cursor: pointer;
+
+  transition:
+    background-color .25s ease,
+    border-color .25s ease,
+    color .25s ease,
+    transform .2s ease,
+    box-shadow .25s ease;
 }
 
 .btn-primary {
-  background: var(--color-accent);
-  color: #041014;
-  border-color: var(--color-accent);
+  background: #18b9d7;
+  color: #0f1722;
+  border-color: #18b9d7;
+}
+
+.btn-primary:hover {
+  background: #2ad2ef;
+  border-color: #2ad2ef;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(24,185,215,.25);
 }
 
 .btn-secondary {
   background: transparent;
   color: var(--color-text);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
 }
 
 .card {
@@ -226,15 +251,25 @@ p {
   }
   
   .nav-cta {
-    border: 1px solid var(--color-border);
     padding: 0.65rem 0.9rem;
+    border: 1px solid #18b9d7;
     border-radius: 999px;
-    color: var(--color-text) !important;
+    background: #18b9d7;
+    color: #0f1722 !important;
+    cursor: pointer;
+    transition:
+      background-color 0.25s ease,
+      border-color 0.25s ease,
+      transform 0.2s ease,
+      box-shadow 0.25s ease;
   }
   
   .nav-cta:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent) !important;
+    background: #2ad2ef;
+    border-color: #2ad2ef;
+    color: #0f1722 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(24, 185, 215, 0.25);
   }
   
   .mobile-nav {
@@ -977,40 +1012,6 @@ p {
 @media (max-width: 900px) {
   .image-feature-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-/* GLOBAL HEADING SCALE */
-
-h1 {
-  font-size: clamp(2.4rem, 4.8vw, 4.8rem);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-}
-
-h2 {
-  font-size: clamp(1.9rem, 3vw, 3rem);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-h3 {
-  font-size: clamp(1.35rem, 2vw, 2rem);
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-}
-
-@media (max-width: 640px) {
-  h1 {
-    font-size: clamp(2.2rem, 10vw, 3.2rem);
-  }
-
-  h2 {
-    font-size: clamp(1.8rem, 8vw, 2.5rem);
-  }
-
-  h3 {
-    font-size: clamp(1.3rem, 6vw, 1.8rem);
   }
 }
 

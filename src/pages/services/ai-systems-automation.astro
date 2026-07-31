@@ -1,26 +1,1393 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const benefits = [
+  {
+    title: 'Less Repetitive Work',
+    copy:
+      'Automations can handle routine data entry, notifications, task creation, document preparation, record updates, and follow-up so employees can focus on work requiring judgment.',
+  },
+  {
+    title: 'Connected Business Tools',
+    copy:
+      'Information can move more reliably between your website, email, CRM, calendar, spreadsheets, document storage, project software, and other approved platforms.',
+  },
+  {
+    title: 'Faster Lead Response',
+    copy:
+      'New enquiries can be captured, categorized, assigned, acknowledged, and prepared for follow-up without waiting for someone to complete every administrative step manually.',
+  },
+  {
+    title: 'Consistent Processes',
+    copy:
+      'Defined workflow rules help the business complete required steps in the same order instead of relying entirely on memory or individual working habits.',
+  },
+  {
+    title: 'Fewer Manual Handoffs',
+    copy:
+      'Automations can pass information and responsibility from one person or platform to another while preserving a clear record of what happened.',
+  },
+  {
+    title: 'Better Process Visibility',
+    copy:
+      'Workflow statuses, notifications, logs, and reports make it easier to understand what completed successfully, what failed, and which items still require attention.',
+  },
+  {
+    title: 'Practical Use of AI',
+    copy:
+      'AI can summarize information, classify requests, search approved knowledge, prepare drafts, or extract structured data when those functions solve a real business problem.',
+  },
+  {
+    title: 'Human Review Where It Matters',
+    copy:
+      'Approvals, sensitive communications, financial decisions, legal judgments, and other important actions can remain subject to review by an authorized person.',
+  },
+  {
+    title: 'Improved Data Quality',
+    copy:
+      'Validation rules, standardized fields, and controlled transfers can reduce missing information, inconsistent formats, and avoidable duplication between systems.',
+  },
+  {
+    title: 'Scalable Operations',
+    copy:
+      'A repeatable workflow can help the business manage more clients, requests, documents, or projects without increasing administration at the same rate.',
+  },
+  {
+    title: 'Reduced Tool Switching',
+    copy:
+      'Employees can receive useful information and complete defined actions without repeatedly moving between several disconnected platforms.',
+  },
+  {
+    title: 'Designed Around Your Business',
+    copy:
+      'The workflow is mapped around your actual process, approval requirements, tools, responsibilities, and customer experience rather than a generic automation template.',
+  },
+];
+
+const workflowExamples = [
+  'Website lead capture and automatic CRM record creation',
+  'Lead qualification, routing, and internal assignment',
+  'Appointment confirmations and reminder sequences',
+  'Client onboarding and information collection',
+  'Automated task creation in project-management platforms',
+  'Document generation from approved templates',
+  'Document collection, categorization, and status tracking',
+  'Email triage, labeling, and internal notification',
+  'Follow-up reminders for leads, clients, or employees',
+  'Invoice and payment-status notifications',
+  'Internal approval and review workflows',
+  'Customer-support request routing',
+  'Sales pipeline updates and reporting',
+  'Employee onboarding and training workflows',
+  'Recurring operational reports and summaries',
+  'Calendar, CRM, email, and task-platform synchronization',
+  'Knowledge assistants trained on approved company material',
+  'AI-assisted record summaries and structured data extraction',
+];
+
+const warningSigns = [
+  {
+    title: 'Employees copy information between tools',
+    copy:
+      'Names, dates, messages, documents, or statuses are repeatedly copied from forms and emails into spreadsheets, CRMs, or task platforms.',
+  },
+  {
+    title: 'Routine communication consumes too much time',
+    copy:
+      'Your team manually sends the same confirmations, reminders, requests, status updates, or internal notifications throughout the week.',
+  },
+  {
+    title: 'Important steps depend on memory',
+    copy:
+      'Follow-ups, assignments, reviews, and deadlines happen only when an employee remembers to complete them.',
+  },
+  {
+    title: 'New enquiries wait too long',
+    copy:
+      'Potential clients submit information but are not acknowledged, categorized, assigned, or followed up with quickly and consistently.',
+  },
+  {
+    title: 'Reporting requires repeated manual preparation',
+    copy:
+      'Employees must gather information from several systems each week or month to create recurring operational reports.',
+  },
+  {
+    title: 'The business has tools but no connected workflow',
+    copy:
+      'Your platforms work independently, leaving employees responsible for moving information and coordinating each handoff manually.',
+  },
+];
+
+const process = [
+  {
+    number: '01',
+    title: 'Identify the process',
+    copy:
+      'We begin with the workflow creating delays, duplication, inconsistency, poor visibility, or unnecessary administrative work.',
+  },
+  {
+    number: '02',
+    title: 'Map the current steps',
+    copy:
+      'We document what starts the process, which people and platforms are involved, what information moves, and where decisions or approvals occur.',
+  },
+  {
+    number: '03',
+    title: 'Find the right automation opportunities',
+    copy:
+      'We separate repeatable administrative actions from work requiring human judgment and identify which steps can be simplified safely.',
+  },
+  {
+    number: '04',
+    title: 'Design the improved workflow',
+    copy:
+      'We define the triggers, actions, conditions, approvals, error paths, notifications, data requirements, and expected outcome before building.',
+  },
+  {
+    number: '05',
+    title: 'Connect and configure the systems',
+    copy:
+      'We build the workflow using appropriate APIs, automation platforms, AI services, databases, or custom code based on the project requirements.',
+  },
+  {
+    number: '06',
+    title: 'Test expected and unexpected scenarios',
+    copy:
+      'We test complete records, missing information, duplicates, failed connections, permission limitations, and other situations the workflow may encounter.',
+  },
+  {
+    number: '07',
+    title: 'Launch with human oversight',
+    copy:
+      'The automation is introduced with clear responsibility for monitoring, approvals, exceptions, and actions that still require a person.',
+  },
+  {
+    number: '08',
+    title: 'Review and improve',
+    copy:
+      'We evaluate how the workflow performs in real operation and can refine rules, notifications, integrations, reporting, and AI behavior over time.',
+  },
+];
+
+const faqItems = [
+  {
+    question: 'What are AI automation services for small businesses?',
+    answer:
+      'AI automation services combine workflow design, system integrations, automation rules, and selected AI capabilities to reduce repetitive work and improve how information moves through a business. The service may include connecting existing platforms, automating administrative tasks, creating AI assistants, and introducing human approval points where required.',
+  },
+  {
+    question: 'Do you add AI to every automation?',
+    answer:
+      'No. Many workflows are more reliable and affordable when built with straightforward rules rather than artificial intelligence. We use AI only when it provides useful capabilities such as summarization, classification, extraction, drafting, or knowledge search that traditional automation cannot handle as effectively.',
+  },
+  {
+    question: 'Can you connect the tools we already use?',
+    answer:
+      'Often, yes. We first review whether your current platforms provide APIs, webhooks, native integrations, exports, or other supported connection methods. Some systems have technical or subscription limitations, so integration feasibility must be confirmed before the project is quoted.',
+  },
+  {
+    question: 'Will automation replace our employees?',
+    answer:
+      'The purpose is to reduce repetitive administration and improve consistency, not remove every human from the process. Employees remain responsible for judgment, relationships, approvals, exceptions, sensitive communication, and other work where context and accountability matter.',
+  },
+  {
+    question: 'Can you automate lead intake and follow-up?',
+    answer:
+      'Yes. A lead workflow can capture website enquiries, validate information, create CRM records, categorize requests, notify the appropriate employee, create tasks, send confirmations, and trigger approved follow-up sequences.',
+  },
+  {
+    question: 'Can you build an internal AI assistant?',
+    answer:
+      'Yes. An internal assistant may search approved documents, summarize records, answer questions based on company knowledge, draft routine content, or help employees find information. Access, data handling, source quality, and human review must be considered during planning.',
+  },
+  {
+    question: 'How long does an automation project take?',
+    answer:
+      'A focused workflow connecting a small number of platforms may be completed relatively quickly. Projects involving several systems, complex conditions, document handling, AI, permissions, or extensive testing require more time. The expected timeline is confirmed after the workflow has been mapped.',
+  },
+  {
+    question: 'Do you maintain automations after launch?',
+    answer:
+      'Yes. Platforms, APIs, permissions, fields, and business processes can change. Ongoing support may include monitoring, troubleshooting, workflow adjustments, integration maintenance, AI refinements, reporting, and monthly operational reviews.',
+  },
+];
+
+const aiCapabilities = [
+  {
+    title: 'Summarization',
+    copy:
+      'Turn lengthy client submissions, notes, conversations, documents, or records into structured summaries for review.',
+  },
+  {
+    title: 'Classification',
+    copy:
+      'Categorize enquiries, documents, support requests, or internal records according to approved business criteria.',
+  },
+  {
+    title: 'Information Extraction',
+    copy:
+      'Identify names, dates, services, amounts, topics, or other structured fields inside approved text and documents.',
+  },
+  {
+    title: 'Knowledge Search',
+    copy:
+      'Help employees search approved company documentation and receive responses grounded in the available material.',
+  },
+  {
+    title: 'Draft Preparation',
+    copy:
+      'Prepare routine email, report, summary, or document drafts for an authorized person to review before use.',
+  },
+  {
+    title: 'Workflow Assistance',
+    copy:
+      'Use AI to interpret unstructured information before sending it into a defined rule-based workflow.',
+  },
+];
 ---
 
 <Layout
-  title="AI Systems & Automation | Static Pulse Sites"
-  description="Practical AI systems and workflow automation that connect your tools, reduce repetitive work, and improve daily operations."
+  title="AI Automation Services for Small Businesses | Static Pulse Sites"
+  description="AI automation services for small businesses, including workflow automation, platform integrations, lead automation, document workflows, internal AI assistants, reporting, human review, pricing, and ongoing support."
 >
-  <section class="section">
-    <div class="container">
-      <h1>AI Systems & Automation</h1>
+  <main class="automation-page">
+    <section class="automation-hero">
+      <div class="container automation-hero-inner">
+        <h1>AI Automation Services for Small Businesses</h1>
 
-      <p class="lead hero-lead">
-        We connect your existing tools and automate repetitive processes so
-        information moves more reliably and your team spends less time on
-        manual work.
-      </p>
+        <p class="automation-hero-statement">
+          Connect your business tools, reduce repetitive work, and create
+          reliable workflows with practical automation and carefully applied
+          AI.
+        </p>
 
-      <div class="button-row">
-        <a class="btn btn-primary" href="/contact">
-          Start Your Project
-        </a>
+        <p class="automation-hero-copy">
+          Static Pulse Sites reviews how information moves through your
+          business, identifies work that can be simplified, and builds
+          automation systems around the platforms your team already uses.
+          Human judgment and approval remain part of the process wherever they
+          are needed.
+        </p>
+
+        <div class="automation-button-row">
+          <a class="btn btn-primary" href="/contact">
+            Start Your Automation Project
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section
+      class="automation-image-section"
+      aria-label="AI systems and business workflow automation"
+    >
+      <img
+        src="/images/ai-system-automation.png"
+        alt="Connected AI systems and automated business workflows"
+        width="1536"
+        height="1024"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </section>
+
+    <section class="automation-section">
+      <div class="container">
+        <div class="automation-centered-heading">
+          <h2>
+            Your software should work together instead of creating more
+            administration
+          </h2>
+
+          <p>
+            Most small and medium businesses already use several digital tools.
+            The operational problem often appears between those tools, where
+            employees must repeatedly move information, send routine messages,
+            create tasks, update records, and remember which step happens next.
+          </p>
+        </div>
+
+        <div class="automation-copy-grid">
+          <div>
+            <h3>The hidden cost of disconnected workflows</h3>
+
+            <p>
+              A customer completes a form, but someone must copy the details
+              into a CRM. An appointment is booked, but another employee must
+              create the project task. A document arrives by email, but someone
+              still needs to rename it, save it, notify the team, and update a
+              tracking sheet.
+            </p>
+
+            <p>
+              Each action may take only a few minutes. Across dozens or
+              hundreds of records, the business loses significant time and
+              creates more opportunities for missing information, inconsistent
+              handling, delayed responses, and avoidable mistakes.
+            </p>
+          </div>
+
+          <div>
+            <h3>A connected process from trigger to outcome</h3>
+
+            <p>
+              Workflow automation allows one event to begin a defined series of
+              actions. A form submission may create a lead, notify the correct
+              employee, assign a task, send a confirmation, and prepare the
+              record for the next stage.
+            </p>
+
+            <p>
+              The workflow can include conditions, approvals, reminders, error
+              handling, and reporting. AI may be introduced when the process
+              needs to interpret, classify, summarize, extract, or search
+              unstructured information.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-section automation-signs-section">
+      <div class="container">
+        <div class="automation-centered-heading">
+          <h2>Signs your business may benefit from workflow automation</h2>
+
+          <p>
+            Automation becomes valuable when repeatable administrative work
+            consumes meaningful time, slows customer service, creates
+            inconsistency, or prevents employees from focusing on higher-value
+            responsibilities.
+          </p>
+        </div>
+
+        <div class="automation-signs-grid">
+          {
+            warningSigns.map((item) => (
+              <article class="automation-card">
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-section">
+      <div class="container">
+        <div class="automation-centered-heading">
+          <h2>Benefits of AI systems and business workflow automation</h2>
+
+          <p>
+            Effective automation improves the process around your employees and
+            customers. It should make information easier to manage, reduce
+            unnecessary effort, and create a more reliable way for work to move
+            through the business.
+          </p>
+        </div>
+
+        <div class="automation-benefits-grid">
+          {
+            benefits.map((benefit) => (
+              <article class="automation-card">
+                <h3>{benefit.title}</h3>
+                <p>{benefit.copy}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-section automation-examples-section">
+      <div class="container">
+        <div class="automation-split-section">
+          <div class="automation-split-heading">
+            <h2>Business processes we can help automate</h2>
+
+            <p>
+              The best automation projects begin with a clearly understood
+              workflow. We review what starts the process, what information is
+              required, which systems are involved, and where employees must
+              remain responsible.
+            </p>
+
+            <p>
+              A workflow may use one platform or connect several systems
+              through APIs, webhooks, automation tools, custom code, databases,
+              and approved AI services.
+            </p>
+          </div>
+
+          <ul class="automation-check-list">
+            {
+              workflowExamples.map((item) => (
+                <li>{item}</li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-section">
+      <div class="container">
+        <div class="automation-centered-heading">
+          <h2>Lead intake and customer follow-up automation</h2>
+
+          <p>
+            Potential customers expect timely communication. A lead automation
+            workflow can reduce the gap between an enquiry and the next
+            appropriate action without sending every lead through the same
+            generic process.
+          </p>
+        </div>
+
+        <div class="automation-copy-grid">
+          <div class="automation-text-panel">
+            <h3>Capture and organize new enquiries</h3>
+
+            <p>
+              Website forms can collect the information required to understand
+              the request and send it into the appropriate CRM, database,
+              spreadsheet, or internal system. The workflow may validate
+              required fields, identify duplicates, and categorize the enquiry
+              according to defined criteria.
+            </p>
+
+            <p>
+              The correct employee can receive an internal notification, a
+              follow-up task, and the relevant lead context without manually
+              reviewing several platforms first.
+            </p>
+          </div>
+
+          <div class="automation-text-panel">
+            <h3>Respond consistently without losing personalization</h3>
+
+            <p>
+              The system can send an immediate confirmation, explain the next
+              step, provide an approved booking link, or request missing
+              information. Follow-up timing can depend on the service,
+              qualification status, or action already taken.
+            </p>
+
+            <p>
+              High-value or sensitive enquiries can remain assigned to a person
+              rather than receiving a fully automated response. Automation
+              supports the relationship instead of replacing it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-section automation-documents-section">
+      <div class="container">
+        <div class="automation-centered-heading">
+          <h2>Email and document automation for repetitive administration</h2>
+
+          <p>
+            Many operational workflows depend on collecting information,
+            preparing standard documents, sending reminders, organizing files,
+            and updating internal records. These steps can often be simplified
+            through carefully designed automation.
+          </p>
+        </div>
+
+        <div class="automation-three-panel-grid">
+          <article class="automation-feature-panel">
+            <h3>Email workflows</h3>
+
+            <p>
+              Send confirmations, reminders, status updates, internal alerts,
+              requests for missing information, and scheduled follow-ups when
+              defined workflow events occur.
+            </p>
+          </article>
+
+          <article class="automation-feature-panel">
+            <h3>Document workflows</h3>
+
+            <p>
+              Generate approved documents from templates, route them for
+              review, organize completed files, track requirements, and notify
+              the appropriate people when action is needed.
+            </p>
+          </article>
+
+          <article class="automation-feature-panel">
+            <h3>Record synchronization</h3>
+
+            <p>
+              Update selected fields across approved systems so employees do
+              not need to enter or revise the same operational information
+              repeatedly.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-section">
+      <div class="container">
+        <div class="automation-centered-heading">
+          <h2>Practical AI capabilities inside a controlled workflow</h2>
+
+          <p>
+            AI is useful when a process involves information that cannot be
+            handled through simple rules alone. It should operate within clear
+            instructions, approved data sources, defined permissions, and
+            appropriate human review.
+          </p>
+        </div>
+
+        <div class="automation-ai-grid">
+          {
+            aiCapabilities.map((capability) => (
+              <article class="automation-card">
+                <h3>{capability.title}</h3>
+                <p>{capability.copy}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-section automation-assistant-section">
+      <div class="container">
+        <div class="automation-centered-heading">
+          <h2>Internal AI assistants grounded in company knowledge</h2>
+
+          <p>
+            Employees often lose time searching through folders, documents,
+            shared drives, inboxes, SOPs, policies, and project records. An
+            internal knowledge assistant can help approved users find and use
+            information more efficiently.
+          </p>
+        </div>
+
+        <div class="automation-copy-grid">
+          <div class="automation-text-panel">
+            <h3>Search approved internal material</h3>
+
+            <p>
+              The assistant can be designed to search selected company
+              documentation and answer questions based on the available
+              sources. Access can be limited according to the user’s role and
+              the sensitivity of the information involved.
+            </p>
+
+            <p>
+              The quality of the result depends heavily on the quality,
+              organization, accuracy, and completeness of the source material.
+              The project may therefore include document preparation and
+              knowledge organization before the assistant is introduced.
+            </p>
+          </div>
+
+          <div class="automation-text-panel">
+            <h3>Support employees without becoming the final authority</h3>
+
+            <p>
+              An AI assistant can help summarize procedures, locate relevant
+              information, prepare a first draft, or suggest a next step. It
+              should not silently replace professional judgment, approved
+              policy, or accountable decision-making.
+            </p>
+
+            <p>
+              Responses can include source references, limitations, escalation
+              instructions, and reminders that an authorized person must review
+              important outputs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-section">
+      <div class="container">
+        <div class="automation-centered-heading">
+          <h2>Reporting automation and clearer operational visibility</h2>
+
+          <p>
+            Recurring reports should not require employees to manually gather
+            the same information from several tools every week or month.
+            Automation can consolidate approved data and deliver useful updates
+            to the people who need them.
+          </p>
+        </div>
+
+        <div class="automation-reporting-layout">
+          <div>
+            <h3>Automated reporting may include</h3>
+
+            <ul class="automation-check-list compact">
+              <li>New lead and enquiry summaries</li>
+              <li>Pipeline and conversion updates</li>
+              <li>Upcoming deadlines and overdue actions</li>
+              <li>Client onboarding completion status</li>
+              <li>Documents still required or awaiting review</li>
+              <li>Project and task-management activity</li>
+              <li>Automation success and failure logs</li>
+              <li>Support request volume and resolution status</li>
+              <li>Invoice and payment-status notifications</li>
+              <li>Weekly or monthly management summaries</li>
+            </ul>
+          </div>
+
+          <div class="automation-reporting-note">
+            <h3>Reports designed to support action</h3>
+
+            <p>
+              A useful report should make it easier to understand what happened
+              and what needs attention. We define the recipients, timing,
+              source data, filters, calculations, and expected action before
+              automating delivery.
+            </p>
+
+            <p>
+              Reports can be delivered through email, dashboards, internal
+              notifications, shared documents, or other supported platforms
+              according to the needs of the business.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-section automation-human-section">
+      <div class="container">
+        <div class="automation-centered-heading">
+          <h2>Human-in-the-loop automation for responsible operations</h2>
+
+          <p>
+            Not every action should happen automatically. A reliable system
+            distinguishes between routine administration and decisions that
+            require context, judgment, authorization, or accountability.
+          </p>
+        </div>
+
+        <div class="automation-three-panel-grid">
+          <article class="automation-feature-panel">
+            <h3>Approval checkpoints</h3>
+
+            <p>
+              Drafts, payments, sensitive messages, record changes, and other
+              important actions can pause until an authorized user reviews and
+              approves them.
+            </p>
+          </article>
+
+          <article class="automation-feature-panel">
+            <h3>Exception handling</h3>
+
+            <p>
+              Incomplete, unusual, high-risk, or conflicting information can be
+              routed to a person rather than being forced through the standard
+              automated path.
+            </p>
+          </article>
+
+          <article class="automation-feature-panel">
+            <h3>Visible activity records</h3>
+
+            <p>
+              Logs, notifications, statuses, and error alerts can provide a
+              clearer record of what the workflow did and where intervention is
+              required.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-section automation-process-section">
+      <div class="container">
+        <div class="automation-centered-heading">
+          <h2>How the automation development process works</h2>
+
+          <p>
+            We do not begin by choosing an automation platform or adding AI.
+            The project begins with the business process, the information
+            involved, the people responsible, and the outcome the workflow must
+            produce.
+          </p>
+        </div>
+
+        <ol class="automation-process-list">
+          {
+            process.map((step) => (
+              <li>
+                <span class="automation-process-number">{step.number}</span>
+
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.copy}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </section>
+
+    <section class="automation-section automation-pricing-section">
+      <div class="container">
+        <div class="automation-centered-heading">
+          <h2>AI systems and workflow automation pricing</h2>
+
+          <p>
+            Focused automation projects start at <strong>$1,500</strong>. Final
+            pricing depends on the number of workflows, platforms, conditions,
+            approval stages, integrations, records, and AI capabilities
+            involved.
+          </p>
+        </div>
+
+        <div class="automation-pricing-grid">
+          <article class="automation-pricing-card">
+            <p class="automation-price-label">Focused workflow</p>
+
+            <h3>Starting at $1,500</h3>
+
+            <p>
+              This starting point is intended for one clearly defined process
+              involving a limited number of platforms, triggers, actions, and
+              conditions.
+            </p>
+
+            <ul>
+              <li>One documented business workflow</li>
+              <li>Basic platform connection</li>
+              <li>Defined trigger and automated actions</li>
+              <li>Standard notifications or record updates</li>
+              <li>Testing and launch configuration</li>
+            </ul>
+          </article>
+
+          <article class="automation-pricing-card">
+            <p class="automation-price-label">Connected business system</p>
+
+            <h3>Quoted after discovery</h3>
+
+            <p>
+              The investment increases when the project connects several tools,
+              contains multiple workflow branches, requires approvals, manages
+              documents, or supports several departments or service types.
+            </p>
+
+            <ul>
+              <li>Multiple connected workflows</li>
+              <li>Conditional routing and approvals</li>
+              <li>CRM, calendar, email, and task integrations</li>
+              <li>Document or client onboarding processes</li>
+              <li>Advanced monitoring and error handling</li>
+            </ul>
+          </article>
+
+          <article class="automation-pricing-card">
+            <p class="automation-price-label">AI capabilities</p>
+
+            <h3>Added according to scope</h3>
+
+            <p>
+              AI assistants, document extraction, classification, summaries,
+              knowledge search, drafting, and other model-based capabilities are
+              priced according to the data preparation, implementation, usage,
+              safeguards, and testing required.
+            </p>
+
+            <ul>
+              <li>AI model and service integration</li>
+              <li>Prompt and workflow configuration</li>
+              <li>Approved knowledge-source preparation</li>
+              <li>Human-review requirements</li>
+              <li>Output testing and refinement</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-section automation-support-section">
+      <div class="container">
+        <div class="automation-support-layout">
+          <div>
+            <h2>Ongoing automation maintenance and monthly support</h2>
+
+            <p>
+              Automated workflows depend on business processes, platform
+              permissions, APIs, fields, data structures, and third-party
+              services that may change over time. Continued review helps ensure
+              the system remains useful and reliable.
+            </p>
+
+            <p>
+              Static Pulse Sites can maintain and improve your automation
+              system for a fair monthly price based on the number of workflows,
+              platforms, integrations, AI services, and expected level of
+              assistance.
+            </p>
+
+            <p>
+              A small workflow requiring occasional monitoring will not be
+              priced the same as a business-critical system involving several
+              platforms, frequent changes, and ongoing optimization.
+            </p>
+          </div>
+
+          <div class="automation-support-card">
+            <h3>Monthly automation support may include</h3>
+
+            <ul class="automation-check-list compact">
+              <li>Workflow monitoring and troubleshooting</li>
+              <li>Failure alerts and error investigation</li>
+              <li>Platform connection and permission updates</li>
+              <li>Field, condition, and routing changes</li>
+              <li>Email and notification refinements</li>
+              <li>AI prompt and output adjustments</li>
+              <li>New workflow branches or approval stages</li>
+              <li>Reporting and dashboard improvements</li>
+              <li>Monthly performance review when required</li>
+              <li>Planned automation expansion</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-section automation-faq-section">
+      <div class="container automation-faq-container">
+        <div class="automation-centered-heading">
+          <h2>Frequently asked questions about AI automation services</h2>
+        </div>
+
+        <div class="automation-faq-list">
+          {
+            faqItems.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="automation-final-section">
+      <div class="container">
+        <div class="automation-final-cta">
+          <h2>Reduce repetitive work without losing human control</h2>
+
+          <p>
+            Tell us which process consumes too much time, where information
+            becomes disconnected, and which tools your team currently uses. You
+            do not need to know which automation platform or AI model you need.
+          </p>
+
+          <div class="automation-button-row">
+            <a class="btn btn-primary" href="/contact">
+              Start Your Automation Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
+
+<style>
+  .automation-page {
+    overflow: hidden;
+  }
+
+  .automation-hero {
+    padding: clamp(3.25rem, 5vw, 5rem) 0
+      clamp(2.75rem, 4vw, 4rem);
+  }
+
+  .automation-hero-inner {
+    max-width: 1120px;
+    text-align: center;
+  }
+
+  .automation-hero h1 {
+    max-width: 1020px;
+    margin: 0 auto;
+    text-wrap: balance;
+  }
+
+  .automation-hero-statement {
+    max-width: 900px;
+    margin: 1.5rem auto 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 2vw, 1.7rem);
+    line-height: 1.35;
+    color: var(--color-text);
+    text-wrap: balance;
+  }
+
+  .automation-hero-copy {
+    max-width: 820px;
+    margin: 1.15rem auto 0;
+    line-height: 1.7;
+  }
+
+  .automation-button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.9rem;
+  }
+
+  .automation-image-section {
+    width: 100%;
+    height: clamp(260px, 38vw, 520px);
+    overflow: hidden;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .automation-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.9) contrast(1.04) brightness(0.86);
+  }
+
+  .automation-section {
+    padding: clamp(2.75rem, 4vw, 4rem) 0;
+  }
+
+  .automation-centered-heading {
+    max-width: 1040px;
+    margin: 0 auto clamp(2.5rem, 3.5vw, 3.5rem);
+    text-align: center;
+  }
+
+  .automation-centered-heading h2 {
+    max-width: 980px;
+    margin: 0 auto;
+    text-wrap: balance;
+  }
+
+  .automation-centered-heading > p {
+    max-width: 830px;
+    margin: 1.15rem auto 0;
+    line-height: 1.7;
+  }
+
+  .automation-centered-heading strong {
+    color: var(--color-text);
+  }
+
+  .automation-copy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.5rem, 3vw, 3rem);
+  }
+
+  .automation-copy-grid h3 {
+    margin: 0;
+  }
+
+  .automation-copy-grid p {
+    margin-top: 1rem;
+    line-height: 1.7;
+  }
+
+  .automation-signs-section,
+  .automation-examples-section,
+  .automation-documents-section,
+  .automation-assistant-section,
+  .automation-human-section,
+  .automation-support-section {
+    background: rgba(255, 255, 255, 0.018);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .automation-signs-grid,
+  .automation-benefits-grid,
+  .automation-ai-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.1rem, 2vw, 1.5rem);
+  }
+
+  .automation-card,
+  .automation-text-panel,
+  .automation-feature-panel,
+  .automation-reporting-note,
+  .automation-pricing-card,
+  .automation-support-card {
+    border: 1px solid var(--color-border);
+    border-radius: 22px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.015)
+    );
+  }
+
+  .automation-card,
+  .automation-feature-panel {
+    padding: clamp(1.5rem, 2.4vw, 2rem);
+  }
+
+  .automation-card h3,
+  .automation-text-panel h3,
+  .automation-feature-panel h3,
+  .automation-reporting-note h3,
+  .automation-pricing-card h3,
+  .automation-support-card h3 {
+    margin: 0;
+  }
+
+  .automation-card p,
+  .automation-text-panel p,
+  .automation-feature-panel p,
+  .automation-reporting-note p,
+  .automation-pricing-card p,
+  .automation-support-card p {
+    margin-top: 0.85rem;
+    line-height: 1.65;
+  }
+
+  .automation-split-section {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: start;
+  }
+
+  .automation-split-heading {
+    position: sticky;
+    top: 120px;
+  }
+
+  .automation-split-heading h2 {
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .automation-split-heading p {
+    margin-top: 1rem;
+    line-height: 1.7;
+  }
+
+  .automation-check-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .automation-check-list li {
+    position: relative;
+    padding: 1rem 1rem 1rem 2rem;
+    color: var(--color-muted);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .automation-check-list li:nth-child(odd) {
+    border-right: 1px solid var(--color-border);
+  }
+
+  .automation-check-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0.5rem;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .automation-check-list.compact {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-check-list.compact li {
+    border-right: 0;
+  }
+
+  .automation-text-panel {
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+  }
+
+  .automation-three-panel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.1rem, 2vw, 1.5rem);
+  }
+
+  .automation-reporting-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(1.5rem, 3vw, 3rem);
+    align-items: start;
+  }
+
+  .automation-reporting-layout > div:first-child > h3 {
+    margin: 0 0 1.5rem;
+  }
+
+  .automation-reporting-note {
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(6, 182, 212, 0.11),
+        transparent 42%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.04),
+        rgba(255, 255, 255, 0.015)
+      );
+  }
+
+  .automation-process-list {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .automation-process-list li {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .automation-process-number {
+    padding-top: 0.2rem;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+  }
+
+  .automation-process-list h3 {
+    margin: 0;
+  }
+
+  .automation-process-list p {
+    max-width: 900px;
+    margin-top: 0.5rem;
+    line-height: 1.65;
+  }
+
+  .automation-pricing-section {
+    background:
+      radial-gradient(
+        circle at top center,
+        rgba(6, 182, 212, 0.055),
+        transparent 35%
+      );
+  }
+
+  .automation-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.1rem, 2vw, 1.5rem);
+  }
+
+  .automation-pricing-card {
+    padding: clamp(1.6rem, 2.5vw, 2.25rem);
+  }
+
+  .automation-price-label {
+    margin: 0 0 0.8rem !important;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent) !important;
+  }
+
+  .automation-pricing-card ul {
+    margin: 1.5rem 0 0;
+    padding-left: 1.2rem;
+  }
+
+  .automation-pricing-card li {
+    margin-bottom: 0.7rem;
+    color: var(--color-muted);
+  }
+
+  .automation-support-layout {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+  }
+
+  .automation-support-layout h2 {
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .automation-support-layout > div:first-child p {
+    margin-top: 1rem;
+    line-height: 1.7;
+  }
+
+  .automation-support-card {
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+  }
+
+  .automation-support-card .automation-check-list {
+    margin-top: 1.5rem;
+  }
+
+  .automation-faq-container {
+    max-width: 980px;
+  }
+
+  .automation-faq-list {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .automation-faq-list details {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .automation-faq-list summary {
+    padding: 1.4rem 0;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: clamp(1.25rem, 2vw, 1.7rem);
+    color: var(--color-text);
+  }
+
+  .automation-faq-list details[open] summary {
+    color: var(--color-accent);
+  }
+
+  .automation-faq-list details p {
+    max-width: 830px;
+    padding: 0 0 1.5rem;
+    line-height: 1.7;
+  }
+
+  .automation-final-section {
+    padding: clamp(2.25rem, 3vw, 3.25rem) 0
+      clamp(3rem, 4vw, 4rem);
+  }
+
+  .automation-final-cta {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: clamp(2.25rem, 4vw, 3.5rem);
+    text-align: center;
+    border: 1px solid var(--color-border);
+    border-radius: 28px;
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(6, 182, 212, 0.12),
+        transparent 38%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.045),
+        rgba(255, 255, 255, 0.015)
+      );
+  }
+
+  .automation-final-cta h2 {
+    max-width: 880px;
+    margin: 0 auto;
+    text-wrap: balance;
+  }
+
+  .automation-final-cta > p {
+    max-width: 770px;
+    margin: 1rem auto 0;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 960px) {
+    .automation-signs-grid,
+    .automation-benefits-grid,
+    .automation-ai-grid,
+    .automation-pricing-grid,
+    .automation-three-panel-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .automation-split-section,
+    .automation-reporting-layout,
+    .automation-support-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .automation-split-heading {
+      position: static;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .automation-hero,
+    .automation-section {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .automation-image-section {
+      height: 230px;
+    }
+
+    .automation-copy-grid,
+    .automation-signs-grid,
+    .automation-benefits-grid,
+    .automation-ai-grid,
+    .automation-pricing-grid,
+    .automation-three-panel-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .automation-check-list {
+      grid-template-columns: 1fr;
+    }
+
+    .automation-check-list li:nth-child(odd) {
+      border-right: 0;
+    }
+
+    .automation-process-list li {
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .automation-final-section {
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+    }
+
+    .automation-final-cta {
+      padding: 2rem 1.25rem;
+      border-radius: 22px;
+    }
+
+    .automation-card,
+    .automation-text-panel,
+    .automation-feature-panel,
+    .automation-reporting-note,
+    .automation-pricing-card,
+    .automation-support-card {
+      border-radius: 19px;
+    }
+  }
+</style>

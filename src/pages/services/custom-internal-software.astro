@@ -1,25 +1,1330 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const benefits = [
+  {
+    title: 'Built Around Your Process',
+    copy:
+      'The software follows the way your team actually manages clients, projects, documents, approvals, and daily operations instead of forcing everyone into a generic template.',
+  },
+  {
+    title: 'Focused Feature Set',
+    copy:
+      'We prioritize the functions your business genuinely needs and avoid adding enterprise-level complexity that creates more training, administration, and maintenance.',
+  },
+  {
+    title: 'Centralized Information',
+    copy:
+      'Important records, notes, documents, statuses, and next steps can be brought into one organized system instead of remaining scattered across separate tools.',
+  },
+  {
+    title: 'Reduced Manual Work',
+    copy:
+      'Custom workflows can reduce repeated data entry, duplicated updates, manual follow-up, and the need to copy information between disconnected platforms.',
+  },
+  {
+    title: 'Clear Process Visibility',
+    copy:
+      'Dashboards and status views help employees understand what is happening, what is overdue, who is responsible, and which action needs to happen next.',
+  },
+  {
+    title: 'Role-Based Access',
+    copy:
+      'Different users can receive appropriate access based on their responsibilities, helping protect sensitive information and simplify each person’s experience.',
+  },
+  {
+    title: 'Business Ownership',
+    copy:
+      'Your company retains ownership of the custom software, source code, approved project files, and business data, subject to any separate third-party platform terms.',
+  },
+  {
+    title: 'Connected Systems',
+    copy:
+      'The software can connect with forms, email, calendars, CRMs, document storage, payment tools, project platforms, and other systems already used by the business.',
+  },
+  {
+    title: 'Designed to Evolve',
+    copy:
+      'The first version can focus on the most important operational problem, with additional users, workflows, reports, and capabilities introduced later when justified.',
+  },
+  {
+    title: 'Consistent Operations',
+    copy:
+      'Required steps, fields, approvals, and reminders can be built into the workflow so important processes are handled more consistently across the team.',
+  },
+  {
+    title: 'Accessible Anywhere',
+    copy:
+      'Web-based internal software can give authorized employees access to the information they need from different locations and devices.',
+  },
+  {
+    title: 'Human-Guided Design',
+    copy:
+      'You do not need to understand software architecture. We translate your business process into a practical system and review it with the people who will use it.',
+  },
+];
+
+const softwareExamples = [
+  'Custom customer relationship management systems',
+  'Client onboarding and intake portals',
+  'Secure document collection portals',
+  'Client status and project-tracking systems',
+  'Employee operations dashboards',
+  'Sales pipeline and lead-management systems',
+  'Content planning and approval platforms',
+  'Case or matter-management tools',
+  'Proposal and quote-generation systems',
+  'Vendor and contract-management systems',
+  'Recruitment and applicant-tracking tools',
+  'Inventory and order-management systems',
+  'Support request and ticket-management platforms',
+  'Compliance and deadline-tracking systems',
+  'Training, knowledge, and SOP platforms',
+  'Membership and customer-access portals',
+  'Custom reporting and business intelligence dashboards',
+  'Internal search and AI knowledge systems',
+];
+
+const process = [
+  {
+    number: '01',
+    title: 'Define the operational problem',
+    copy:
+      'We begin by identifying the specific process that is creating delays, duplication, confusion, poor visibility, or unnecessary administrative work.',
+  },
+  {
+    number: '02',
+    title: 'Map the current workflow',
+    copy:
+      'We document the people, tools, information, decisions, documents, and handoffs involved so we understand how work is currently completed.',
+  },
+  {
+    number: '03',
+    title: 'Design the first useful version',
+    copy:
+      'We define the smallest practical feature set that can solve the central problem without turning the project into an unnecessarily large software build.',
+  },
+  {
+    number: '04',
+    title: 'Plan the data and permissions',
+    copy:
+      'We establish what information the system will store, how records connect, which users need access, and where human approval or review must remain.',
+  },
+  {
+    number: '05',
+    title: 'Build and review',
+    copy:
+      'We develop the system in stages and review it with you throughout the project so the interface and workflow reflect how the business actually operates.',
+  },
+  {
+    number: '06',
+    title: 'Test real scenarios',
+    copy:
+      'The software is tested using expected workflows, incomplete information, permission differences, errors, and other situations that may occur during daily use.',
+  },
+  {
+    number: '07',
+    title: 'Launch and support adoption',
+    copy:
+      'We put the system into use, explain the agreed workflow, and help address the practical adjustments that become visible once employees begin working with it.',
+  },
+  {
+    number: '08',
+    title: 'Improve over time',
+    copy:
+      'New features, integrations, reports, and automations can be introduced later based on real usage and measurable business needs.',
+  },
+];
+
+const faqItems = [
+  {
+    question: 'What is custom internal software?',
+    answer:
+      'Custom internal software is a system created for use inside a specific business. Unlike public consumer software, it supports employees, clients, contractors, or approved partners with a defined operational process such as onboarding, project management, document collection, reporting, sales tracking, or client service.',
+  },
+  {
+    question: 'How is this different from buying an existing platform?',
+    answer:
+      'Existing software is designed to accommodate many businesses and often contains features, workflows, terminology, and pricing structures that may not fit your operation. Custom software is appropriate when the process is important enough that generic tools create repeated workarounds, missing visibility, duplicate data entry, or significant inefficiency.',
+  },
+  {
+    question: 'Does custom software need to replace all our current tools?',
+    answer:
+      'No. The objective is usually to solve one operational problem well, not rebuild every platform your business uses. The custom system may sit between your existing tools, centralize a specific workflow, or replace only the part of your current software that is not working.',
+  },
+  {
+    question: 'Can you build a custom CRM?',
+    answer:
+      'Yes. A focused custom CRM can manage leads, clients, communications, notes, documents, tasks, statuses, and next steps around your actual customer journey. It is not intended to recreate every feature of a large enterprise CRM unless those features are genuinely required.',
+  },
+  {
+    question: 'Can the software include AI or automation?',
+    answer:
+      'Yes, when those capabilities provide practical value. The system may summarize records, search approved documentation, draft routine content, create tasks, generate notifications, or move information between platforms. Human review remains part of the workflow wherever judgment, approval, or accountability is required.',
+  },
+  {
+    question: 'Will we own the software?',
+    answer:
+      'Yes. Ownership is a core principle of Static Pulse Sites. Clients retain ownership of their custom software, source code, and business data, subject to the separate terms of any hosting provider, database, AI service, or third-party platform used by the project.',
+  },
+  {
+    question: 'How long does custom internal software take to build?',
+    answer:
+      'The timeline depends on the number of users, workflows, permissions, integrations, records, and features involved. A focused first version may be completed much faster than a broad system involving multiple departments and complex data. The estimated timeline is confirmed after the discovery and scoping process.',
+  },
+  {
+    question: 'Do you maintain the software after launch?',
+    answer:
+      'Yes. Ongoing support can include monitoring, troubleshooting, user adjustments, workflow changes, new reports, integrations, security reviews, database maintenance, and continued feature development. The monthly arrangement depends on the complexity of the software and the expected level of support.',
+  },
+];
+
+const warningSigns = [
+  {
+    title: 'Spreadsheets have become operational systems',
+    copy:
+      'Multiple employees depend on large spreadsheets with fragile formulas, inconsistent versions, limited permissions, or unclear ownership.',
+  },
+  {
+    title: 'Information is entered more than once',
+    copy:
+      'Employees repeatedly copy the same names, dates, notes, documents, statuses, or financial information into several unrelated tools.',
+  },
+  {
+    title: 'The process depends on memory',
+    copy:
+      'Important follow-ups, approvals, deadlines, and handoffs happen only when someone remembers to complete them.',
+  },
+  {
+    title: 'Management lacks a reliable overview',
+    copy:
+      'It is difficult to see workload, progress, overdue items, pipeline activity, document status, or operational bottlenecks without manually compiling reports.',
+  },
+  {
+    title: 'Generic software requires constant workarounds',
+    copy:
+      'Your team pays for a large platform but still uses separate spreadsheets, documents, inboxes, and manual processes to complete the actual work.',
+  },
+  {
+    title: 'Growth increases administrative strain',
+    copy:
+      'Adding more clients, employees, projects, or locations creates additional coordination problems instead of producing a repeatable process.',
+  },
+];
 ---
 
 <Layout
-  title="Custom Internal Software | Static Pulse Sites"
-  description="Focused internal software built around the way your business manages clients, projects, documents, data, and operations."
+  title="Custom Internal Software Development for Small Businesses | Static Pulse Sites"
+  description="Custom internal software development for small businesses, including custom CRMs, client portals, operations dashboards, onboarding systems, document tools, integrations, ownership, and ongoing support."
 >
-  <section class="section">
-    <div class="container">
-      <h1>Custom Internal Software</h1>
+  <main class="software-page">
+    <section class="software-hero">
+      <div class="container software-hero-inner">
+        <h1>Custom Internal Software Development for Small Businesses</h1>
 
-      <p class="lead hero-lead">
-        We build focused internal tools around your actual process when
-        off-the-shelf software cannot solve the problem cleanly.
-      </p>
+        <p class="software-hero-statement">
+          Focused internal tools built around the way your team manages
+          clients, information, documents, projects, and operations.
+        </p>
 
-      <div class="button-row">
-        <a class="btn btn-primary" href="/contact">
-          Start Your Project
-        </a>
+        <p class="software-hero-copy">
+          Static Pulse Sites creates practical custom business software for
+          companies that have outgrown spreadsheets, disconnected platforms,
+          manual workarounds, or generic systems that do not reflect the way
+          their teams actually work.
+        </p>
+
+        <div class="software-button-row">
+          <a class="btn btn-primary" href="/contact">
+            Start Your Software Project
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section
+      class="software-image-section"
+      aria-label="Planning custom internal software for a small business"
+    >
+      <img
+        src="/images/small-business-website-planning.jpg"
+        alt="Small business team planning a custom internal software system"
+        width="1536"
+        height="1024"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </section>
+
+    <section class="software-section">
+      <div class="container">
+        <div class="software-centered-heading">
+          <h2>
+            Your business should not have to reshape itself around generic
+            software
+          </h2>
+
+          <p>
+            Most businesses already use several platforms. The problem is often
+            that those platforms do not communicate, do not follow the full
+            process, and do not give employees one reliable place to understand
+            what is happening.
+          </p>
+        </div>
+
+        <div class="software-copy-grid">
+          <div>
+            <h3>When existing tools leave important gaps</h3>
+
+            <p>
+              A company may use email for communication, spreadsheets for
+              tracking, cloud folders for documents, project software for
+              tasks, and a CRM for client records. Each system may perform one
+              function, but employees still spend time connecting the process
+              manually.
+            </p>
+
+            <p>
+              Information is copied from one platform to another. Important
+              context remains inside inboxes. Statuses are updated
+              inconsistently. Reports require several exports. Managers cannot
+              easily see which clients, projects, documents, or requests need
+              attention.
+            </p>
+          </div>
+
+          <div>
+            <h3>Software built around one clear operational outcome</h3>
+
+            <p>
+              Custom internal software creates a focused place where the
+              business can manage the part of the process that existing tools
+              do not handle properly. It may centralize client records,
+              standardize onboarding, collect documents, track approvals,
+              manage a pipeline, or show operational information in one
+              dashboard.
+            </p>
+
+            <p>
+              The objective is not to build the largest possible platform. We
+              identify the most important problem and create the simplest
+              reliable system that solves it well.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-section software-signs-section">
+      <div class="container">
+        <div class="software-centered-heading">
+          <h2>Signs your business may need a custom internal system</h2>
+
+          <p>
+            Custom software becomes worth considering when operational
+            workarounds consume meaningful time, create risk, limit visibility,
+            or prevent the business from following a consistent process.
+          </p>
+        </div>
+
+        <div class="software-signs-grid">
+          {
+            warningSigns.map((item) => (
+              <article class="software-card">
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="software-section">
+      <div class="container">
+        <div class="software-centered-heading">
+          <h2>Benefits of custom internal software development</h2>
+
+          <p>
+            A properly scoped internal application can make work easier to
+            understand, reduce unnecessary administration, and give your
+            company more control over the systems and information supporting
+            its operations.
+          </p>
+        </div>
+
+        <div class="software-benefits-grid">
+          {
+            benefits.map((benefit) => (
+              <article class="software-card">
+                <h3>{benefit.title}</h3>
+                <p>{benefit.copy}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="software-section software-examples-section">
+      <div class="container">
+        <div class="software-split-section">
+          <div class="software-split-heading">
+            <h2>Examples of custom business software we can build</h2>
+
+            <p>
+              Internal software can support many different workflows. The best
+              projects begin with a specific operational need rather than a
+              desire to add more technology.
+            </p>
+
+            <p>
+              A system may be used exclusively by employees or may also provide
+              controlled access to clients, vendors, applicants, contractors,
+              or other approved users.
+            </p>
+          </div>
+
+          <ul class="software-check-list">
+            {
+              softwareExamples.map((item) => (
+                <li>{item}</li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-section">
+      <div class="container">
+        <div class="software-centered-heading">
+          <h2>Custom CRM development built around your customer journey</h2>
+
+          <p>
+            Many small businesses need a clear way to manage leads and clients
+            without adopting an enterprise platform containing hundreds of
+            features their teams will never use.
+          </p>
+        </div>
+
+        <div class="software-copy-grid">
+          <div class="software-text-panel">
+            <h3>A focused place for client information</h3>
+
+            <p>
+              A custom CRM can organize contact details, services, enquiries,
+              communications, documents, notes, tasks, deadlines, statuses, and
+              next steps around your actual sales or service process.
+            </p>
+
+            <p>
+              Forms from the public website can create records automatically,
+              assign responsibility, send confirmations, and begin the correct
+              internal workflow without requiring employees to re-enter the
+              same information.
+            </p>
+          </div>
+
+          <div class="software-text-panel">
+            <h3>Only the workflows your team needs</h3>
+
+            <p>
+              The interface can use your terminology, your status stages, your
+              approval requirements, and your reporting priorities. Employees
+              see the functions relevant to their roles instead of navigating a
+              generic platform built for many unrelated business models.
+            </p>
+
+            <p>
+              As the business grows, additional dashboards, reports,
+              integrations, and workflow automations can be introduced without
+              rebuilding the entire system immediately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-section software-portals-section">
+      <div class="container">
+        <div class="software-centered-heading">
+          <h2>Client portals, onboarding systems, and document workflows</h2>
+
+          <p>
+            Internal software can also create a structured experience for
+            clients and other external users while keeping the business in
+            control of the information, requirements, and next steps.
+          </p>
+        </div>
+
+        <div class="software-three-panel-grid">
+          <article class="software-feature-panel">
+            <h3>Client portals</h3>
+
+            <p>
+              Provide a secure place where clients can view approved
+              information, follow project status, access resources, submit
+              requests, or complete required actions without relying on long
+              email threads.
+            </p>
+          </article>
+
+          <article class="software-feature-panel">
+            <h3>Onboarding systems</h3>
+
+            <p>
+              Collect information, assign internal responsibilities, generate
+              documents, send reminders, track completion, and guide each new
+              client or employee through a consistent onboarding process.
+            </p>
+          </article>
+
+          <article class="software-feature-panel">
+            <h3>Document collection</h3>
+
+            <p>
+              Request, categorize, review, approve, and track documents through
+              a structured portal rather than managing attachments across
+              separate inboxes and folders.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-section">
+      <div class="container">
+        <div class="software-centered-heading">
+          <h2>Dashboards that make operational information easier to use</h2>
+
+          <p>
+            A dashboard should help someone make a decision or take an action.
+            We design operational views around the information employees and
+            managers genuinely need rather than filling screens with decorative
+            charts.
+          </p>
+        </div>
+
+        <div class="software-dashboard-layout">
+          <div>
+            <h3>Operational dashboards may show</h3>
+
+            <ul class="software-check-list compact">
+              <li>Current client and project statuses</li>
+              <li>Overdue tasks, approvals, and deadlines</li>
+              <li>Upcoming appointments or milestones</li>
+              <li>Documents still required from clients</li>
+              <li>Lead and sales pipeline activity</li>
+              <li>Employee workload and assignments</li>
+              <li>Recent system actions and notifications</li>
+              <li>Workflow completion and failure status</li>
+              <li>Revenue, costs, or other approved metrics</li>
+              <li>Items requiring management attention</li>
+            </ul>
+          </div>
+
+          <div class="software-dashboard-note">
+            <h3>One reliable view instead of repeated manual reporting</h3>
+
+            <p>
+              When information is stored across several systems, employees may
+              spend hours exporting data, updating spreadsheets, and preparing
+              recurring reports. A custom dashboard can consolidate approved
+              information and present it according to the needs of each role.
+            </p>
+
+            <p>
+              Dashboards can also trigger internal notifications or create
+              scheduled summaries so people receive important information
+              without repeatedly checking several platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-section software-integration-section">
+      <div class="container">
+        <div class="software-centered-heading">
+          <h2>Connect custom software with the tools you already use</h2>
+
+          <p>
+            Building internal software does not automatically mean replacing
+            your existing platforms. When appropriate integrations are
+            available, the new system can work alongside the tools already
+            supporting the business.
+          </p>
+        </div>
+
+        <div class="software-copy-grid">
+          <div class="software-text-panel">
+            <h3>Possible system connections</h3>
+
+            <p>
+              Custom software may connect with website forms, Gmail or other
+              email providers, calendars, cloud storage, payment platforms,
+              accounting systems, project-management tools, CRMs, automation
+              platforms, databases, and AI services.
+            </p>
+
+            <p>
+              Integration availability depends on each platform’s API,
+              permissions, data structure, usage limits, and technical
+              restrictions. These factors are reviewed before the project is
+              quoted.
+            </p>
+          </div>
+
+          <div class="software-text-panel">
+            <h3>Automation without losing human oversight</h3>
+
+            <p>
+              The system can create records, send reminders, generate routine
+              documents, summarize information, update statuses, or notify
+              employees when defined events occur.
+            </p>
+
+            <p>
+              Important decisions can remain subject to human review. We
+              identify where judgment, approval, privacy, or accountability
+              requires a person to remain involved in the workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-section software-ownership-section">
+      <div class="container">
+        <div class="software-centered-heading">
+          <h2>Ownership, security, and long-term flexibility</h2>
+
+          <p>
+            Internal software may hold important operational and client
+            information. The project must therefore be planned with clear
+            ownership, appropriate access, and realistic security practices
+            from the beginning.
+          </p>
+        </div>
+
+        <div class="software-three-panel-grid">
+          <article class="software-feature-panel">
+            <h3>Your company owns the project</h3>
+
+            <p>
+              Clients retain ownership of the custom application, source code,
+              approved project files, and business data. Hosting, database, AI,
+              and other third-party services remain subject to their own terms.
+            </p>
+          </article>
+
+          <article class="software-feature-panel">
+            <h3>Access based on responsibility</h3>
+
+            <p>
+              User roles and permissions can limit which records, actions,
+              administrative settings, and sensitive information each person is
+              allowed to access.
+            </p>
+          </article>
+
+          <article class="software-feature-panel">
+            <h3>Built for continued development</h3>
+
+            <p>
+              The software can begin with a focused first version and expand
+              based on real usage, rather than requiring the business to predict
+              every future feature before launch.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-section software-process-section">
+      <div class="container">
+        <div class="software-centered-heading">
+          <h2>How the custom software development process works</h2>
+
+          <p>
+            The development process begins with business analysis, not a list of
+            fashionable technologies. We first understand how the work is
+            completed and where the system must improve the process.
+          </p>
+        </div>
+
+        <ol class="software-process-list">
+          {
+            process.map((step) => (
+              <li>
+                <span class="software-process-number">{step.number}</span>
+
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.copy}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </section>
+
+    <section class="software-section software-pricing-section">
+      <div class="container">
+        <div class="software-centered-heading">
+          <h2>Custom internal software pricing</h2>
+
+          <p>
+            Focused custom software projects start at <strong>$2,000</strong>.
+            Final pricing is based on the users, workflows, records, features,
+            permissions, integrations, and support involved.
+          </p>
+        </div>
+
+        <div class="software-pricing-grid">
+          <article class="software-pricing-card">
+            <p class="software-price-label">Focused first version</p>
+
+            <h3>Starting at $2,000</h3>
+
+            <p>
+              This starting point is intended for a small internal tool solving
+              one clearly defined business problem with a limited number of
+              screens, users, records, and workflow steps.
+            </p>
+
+            <ul>
+              <li>One clearly defined operational workflow</li>
+              <li>Core records and data structure</li>
+              <li>Focused dashboard or management interface</li>
+              <li>Basic user access</li>
+              <li>Testing and launch configuration</li>
+            </ul>
+          </article>
+
+          <article class="software-pricing-card">
+            <p class="software-price-label">Expanded operational system</p>
+
+            <h3>Quoted after discovery</h3>
+
+            <p>
+              The investment increases when the system requires several user
+              roles, complex permissions, multiple workflows, external portals,
+              document handling, reporting, or substantial custom interface
+              design.
+            </p>
+
+            <ul>
+              <li>Multiple connected workflows</li>
+              <li>Client or external-user access</li>
+              <li>Advanced roles and permissions</li>
+              <li>Custom reports and dashboards</li>
+              <li>Complex data relationships</li>
+            </ul>
+          </article>
+
+          <article class="software-pricing-card">
+            <p class="software-price-label">Integrations and AI</p>
+
+            <h3>Added according to scope</h3>
+
+            <p>
+              External platform integrations, automation workflows, AI
+              capabilities, document generation, search, data migration, and
+              specialized reporting are priced according to the implementation
+              and testing required.
+            </p>
+
+            <ul>
+              <li>Third-party API integrations</li>
+              <li>Automated notifications and task creation</li>
+              <li>AI summaries, search, or assistance</li>
+              <li>Existing-data import or migration</li>
+              <li>Advanced workflow testing</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-section software-support-section">
+      <div class="container">
+        <div class="software-support-layout">
+          <div>
+            <h2>Ongoing software maintenance and improvement</h2>
+
+            <p>
+              Internal software usually develops alongside the business. Once
+              employees begin using the system every day, new opportunities for
+              simplification, reporting, automation, and usability become
+              visible.
+            </p>
+
+            <p>
+              Static Pulse Sites can continue maintaining and improving the
+              application for a fair monthly price based on its complexity,
+              number of users, integrations, and expected level of assistance.
+            </p>
+
+            <p>
+              Ongoing support is scoped transparently. A focused tool requiring
+              occasional adjustments will not be priced the same as a
+              business-critical system involving several integrations and
+              recurring feature development.
+            </p>
+          </div>
+
+          <div class="software-support-card">
+            <h3>Monthly software support may include</h3>
+
+            <ul class="software-check-list compact">
+              <li>Technical monitoring and troubleshooting</li>
+              <li>User and permission adjustments</li>
+              <li>New fields, statuses, and workflow steps</li>
+              <li>Dashboard and reporting improvements</li>
+              <li>Form and validation changes</li>
+              <li>Integration maintenance</li>
+              <li>Database and performance review</li>
+              <li>Security and access review</li>
+              <li>Employee feedback implementation</li>
+              <li>Planned feature development</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="software-section software-faq-section">
+      <div class="container software-faq-container">
+        <div class="software-centered-heading">
+          <h2>Frequently asked questions about custom internal software</h2>
+        </div>
+
+        <div class="software-faq-list">
+          {
+            faqItems.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="software-final-section">
+      <div class="container">
+        <div class="software-final-cta">
+          <h2>Build the missing system your business actually needs</h2>
+
+          <p>
+            Tell us which process is creating delays, duplication, poor
+            visibility, or unnecessary administrative work. You do not need to
+            arrive with software specifications or a technical plan.
+          </p>
+
+          <div class="software-button-row">
+            <a class="btn btn-primary" href="/contact">
+              Start Your Software Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
+
+<style>
+  .software-page {
+    overflow: hidden;
+  }
+
+  .software-hero {
+    padding: clamp(3.25rem, 5vw, 5rem) 0
+      clamp(2.75rem, 4vw, 4rem);
+  }
+
+  .software-hero-inner {
+    max-width: 1120px;
+    text-align: center;
+  }
+
+  .software-hero h1 {
+    max-width: 1020px;
+    margin: 0 auto;
+    text-wrap: balance;
+  }
+
+  .software-hero-statement {
+    max-width: 900px;
+    margin: 1.5rem auto 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 2vw, 1.7rem);
+    line-height: 1.35;
+    color: var(--color-text);
+    text-wrap: balance;
+  }
+
+  .software-hero-copy {
+    max-width: 820px;
+    margin: 1.15rem auto 0;
+    line-height: 1.7;
+  }
+
+  .software-button-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.9rem;
+  }
+
+  .software-image-section {
+    width: 100%;
+    height: clamp(260px, 38vw, 520px);
+    overflow: hidden;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .software-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 48%;
+    filter: saturate(0.88) contrast(1.04) brightness(0.86);
+  }
+
+  .software-section {
+    padding: clamp(2.75rem, 4vw, 4rem) 0;
+  }
+
+  .software-centered-heading {
+    max-width: 1040px;
+    margin: 0 auto clamp(2.5rem, 3.5vw, 3.5rem);
+    text-align: center;
+  }
+
+  .software-centered-heading h2 {
+    max-width: 980px;
+    margin: 0 auto;
+    text-wrap: balance;
+  }
+
+  .software-centered-heading > p {
+    max-width: 830px;
+    margin: 1.15rem auto 0;
+    line-height: 1.7;
+  }
+
+  .software-centered-heading strong {
+    color: var(--color-text);
+  }
+
+  .software-copy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.5rem, 3vw, 3rem);
+  }
+
+  .software-copy-grid h3 {
+    margin: 0;
+  }
+
+  .software-copy-grid p {
+    margin-top: 1rem;
+    line-height: 1.7;
+  }
+
+  .software-signs-section,
+  .software-examples-section,
+  .software-portals-section,
+  .software-ownership-section,
+  .software-support-section {
+    background: rgba(255, 255, 255, 0.018);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .software-signs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.1rem, 2vw, 1.5rem);
+  }
+
+  .software-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.1rem, 2vw, 1.5rem);
+  }
+
+  .software-card,
+  .software-text-panel,
+  .software-feature-panel,
+  .software-dashboard-note,
+  .software-pricing-card,
+  .software-support-card {
+    border: 1px solid var(--color-border);
+    border-radius: 22px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.015)
+    );
+  }
+
+  .software-card,
+  .software-feature-panel {
+    padding: clamp(1.5rem, 2.4vw, 2rem);
+  }
+
+  .software-card h3,
+  .software-text-panel h3,
+  .software-feature-panel h3,
+  .software-dashboard-note h3,
+  .software-pricing-card h3,
+  .software-support-card h3 {
+    margin: 0;
+  }
+
+  .software-card p,
+  .software-text-panel p,
+  .software-feature-panel p,
+  .software-dashboard-note p,
+  .software-pricing-card p,
+  .software-support-card p {
+    margin-top: 0.85rem;
+    line-height: 1.65;
+  }
+
+  .software-split-section {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: start;
+  }
+
+  .software-split-heading {
+    position: sticky;
+    top: 120px;
+  }
+
+  .software-split-heading h2 {
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .software-split-heading p {
+    margin-top: 1rem;
+    line-height: 1.7;
+  }
+
+  .software-check-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .software-check-list li {
+    position: relative;
+    padding: 1rem 1rem 1rem 2rem;
+    color: var(--color-muted);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .software-check-list li:nth-child(odd) {
+    border-right: 1px solid var(--color-border);
+  }
+
+  .software-check-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0.5rem;
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .software-check-list.compact {
+    grid-template-columns: 1fr;
+  }
+
+  .software-check-list.compact li {
+    border-right: 0;
+  }
+
+  .software-text-panel {
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+  }
+
+  .software-three-panel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.1rem, 2vw, 1.5rem);
+  }
+
+  .software-dashboard-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(1.5rem, 3vw, 3rem);
+    align-items: start;
+  }
+
+  .software-dashboard-layout > div:first-child > h3 {
+    margin: 0 0 1.5rem;
+  }
+
+  .software-dashboard-note {
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(6, 182, 212, 0.11),
+        transparent 42%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.04),
+        rgba(255, 255, 255, 0.015)
+      );
+  }
+
+  .software-process-list {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .software-process-list li {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .software-process-number {
+    padding-top: 0.2rem;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+  }
+
+  .software-process-list h3 {
+    margin: 0;
+  }
+
+  .software-process-list p {
+    max-width: 900px;
+    margin-top: 0.5rem;
+    line-height: 1.65;
+  }
+
+  .software-pricing-section {
+    background:
+      radial-gradient(
+        circle at top center,
+        rgba(6, 182, 212, 0.055),
+        transparent 35%
+      );
+  }
+
+  .software-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.1rem, 2vw, 1.5rem);
+  }
+
+  .software-pricing-card {
+    padding: clamp(1.6rem, 2.5vw, 2.25rem);
+  }
+
+  .software-price-label {
+    margin: 0 0 0.8rem !important;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent) !important;
+  }
+
+  .software-pricing-card ul {
+    margin: 1.5rem 0 0;
+    padding-left: 1.2rem;
+  }
+
+  .software-pricing-card li {
+    margin-bottom: 0.7rem;
+    color: var(--color-muted);
+  }
+
+  .software-support-layout {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+  }
+
+  .software-support-layout h2 {
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .software-support-layout > div:first-child p {
+    margin-top: 1rem;
+    line-height: 1.7;
+  }
+
+  .software-support-card {
+    padding: clamp(1.75rem, 3vw, 2.5rem);
+  }
+
+  .software-support-card .software-check-list {
+    margin-top: 1.5rem;
+  }
+
+  .software-faq-container {
+    max-width: 980px;
+  }
+
+  .software-faq-list {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .software-faq-list details {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .software-faq-list summary {
+    padding: 1.4rem 0;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: clamp(1.25rem, 2vw, 1.7rem);
+    color: var(--color-text);
+  }
+
+  .software-faq-list details[open] summary {
+    color: var(--color-accent);
+  }
+
+  .software-faq-list details p {
+    max-width: 830px;
+    padding: 0 0 1.5rem;
+    line-height: 1.7;
+  }
+
+  .software-final-section {
+    padding: clamp(2.25rem, 3vw, 3.25rem) 0
+      clamp(3rem, 4vw, 4rem);
+  }
+
+  .software-final-cta {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: clamp(2.25rem, 4vw, 3.5rem);
+    text-align: center;
+    border: 1px solid var(--color-border);
+    border-radius: 28px;
+    background:
+      radial-gradient(
+        circle at top right,
+        rgba(6, 182, 212, 0.12),
+        transparent 38%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.045),
+        rgba(255, 255, 255, 0.015)
+      );
+  }
+
+  .software-final-cta h2 {
+    max-width: 880px;
+    margin: 0 auto;
+    text-wrap: balance;
+  }
+
+  .software-final-cta > p {
+    max-width: 770px;
+    margin: 1rem auto 0;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 960px) {
+    .software-signs-grid,
+    .software-benefits-grid,
+    .software-pricing-grid,
+    .software-three-panel-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .software-split-section,
+    .software-dashboard-layout,
+    .software-support-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .software-split-heading {
+      position: static;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .software-hero,
+    .software-section {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .software-image-section {
+      height: 230px;
+    }
+
+    .software-copy-grid,
+    .software-signs-grid,
+    .software-benefits-grid,
+    .software-pricing-grid,
+    .software-three-panel-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .software-check-list {
+      grid-template-columns: 1fr;
+    }
+
+    .software-check-list li:nth-child(odd) {
+      border-right: 0;
+    }
+
+    .software-process-list li {
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .software-final-section {
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+    }
+
+    .software-final-cta {
+      padding: 2rem 1.25rem;
+      border-radius: 22px;
+    }
+
+    .software-card,
+    .software-text-panel,
+    .software-feature-panel,
+    .software-dashboard-note,
+    .software-pricing-card,
+    .software-support-card {
+      border-radius: 19px;
+    }
+  }
+</style>
