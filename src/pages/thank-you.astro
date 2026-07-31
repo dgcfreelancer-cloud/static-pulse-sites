@@ -1,32 +1,68 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import CTA from '../components/CTA.astro';
 ---
 
 <Layout
-  title="Thank You | Static Pulse Sites"
-  description="Thank you for contacting Static Pulse Sites."
+  title="Project Request Received | Static Pulse Sites"
+  description="Your project request has been received by Static Pulse Sites."
 >
-  <section class="section">
-    <div class="container">
-      <p class="eyebrow">Request Received</p>
-      <h1>Thank you. We’ll review your project request.</h1>
-      <p class="lead hero-lead">
-        Your message has been sent. If your project fits Static Pulse Sites, we’ll reply with recommended next steps.
-      </p>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Your project request has been received.</h1>
 
-      <div class="button-row">
-        <a class="btn btn-primary" href="/">Back to Home</a>
-        <a class="btn btn-secondary" href="/services">View Services</a>
+        <p class="lead hero-lead">
+          Thank you for contacting Static Pulse Sites. We will review the
+          information you submitted and respond by email with questions,
+          recommendations, or the appropriate next step.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <CTA
-    eyebrow="Next Step"
-    title="While you wait, explore our website packages."
-    text="See which Static Pulse Sites package best matches your business needs."
-    buttonText="View Services"
-    buttonHref="/services"
-  />
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>What happens next?</h2>
+        </div>
+
+        <ol class="process-list">
+          <li>
+            <strong>We review your request.</strong>
+            We look at the business problem, current tools, and service you
+            selected.
+          </li>
+
+          <li>
+            <strong>We identify the next step.</strong>
+            We may ask for clarification, request additional information, or
+            explain the most appropriate service.
+          </li>
+
+          <li>
+            <strong>We respond by email.</strong>
+            There is no automatic sales call or scheduling requirement.
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Continue exploring Static Pulse Sites.</h2>
+
+          <p class="lead">
+            Review our services to learn how websites, automation, and custom
+            software can work together.
+          </p>
+
+          <div class="button-row">
+            <a class="btn btn-primary" href="/services">
+              View Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

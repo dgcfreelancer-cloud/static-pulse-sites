@@ -1,97 +1,94 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import SectionTitle from '../components/SectionTitle.astro';
-import CTA from '../components/CTA.astro';
 
 const posts = [
   {
-    label: '01 // Security',
     title: 'Why WordPress Can Become a Security Liability for Small Businesses',
     description:
-      'A practical look at WordPress security vulnerabilities, plugin dependency, and why static websites can offer a cleaner foundation for service businesses.',
+      'A practical explanation of plugin dependency, maintenance risks, and when a simpler website architecture may be appropriate.',
     href: '/blog/wordpress-security-vulnerabilities-small-business',
+    category: 'Website Development',
   },
   {
-    label: '02 // Ownership',
-    title: 'Beyond Templates: Why Renting Your Website Can Hurt Local Business SEO',
+    title: 'Beyond Templates: Why Website Ownership Matters for Small Businesses',
     description:
-      'Why affordable custom web development can help small businesses improve performance, ownership, and long-term search visibility.',
+      'How website performance, platform dependency, and code ownership can affect the long-term value of your online presence.',
     href: '/blog/affordable-custom-web-development-small-business',
+    category: 'Website Development',
   },
 ];
 ---
 
 <Layout
-  title="Blog | Static Pulse Sites"
-  description="Articles about static websites, WordPress alternatives, website ownership, SEO foundations, speed, and safer small business web architecture."
+  title="Business Systems Blog | Static Pulse Sites"
+  description="Articles about website development, AI systems, workflow automation, custom internal software, and business efficiency."
 >
-  <section class="section">
-    <div class="container">
-      <p class="eyebrow">Blog // Website Strategy</p>
-      <h1>Clear thinking for faster, safer business websites.</h1>
-      <p class="lead hero-lead">
-        Practical articles for small business owners who want to understand website ownership, static architecture, WordPress alternatives, SEO foundations, and long-term web safety.
-      </p>
-    </div>
-  </section>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Practical guidance for building better business systems.</h1>
 
-  <section class="section">
-    <div class="container">
-      <SectionTitle
-        eyebrow="Latest Articles"
-        title="Start here."
-        text="These articles explain the core ideas behind Static Pulse Sites: fewer moving parts, faster performance, and stronger ownership."
-      />
-
-      <div class="grid-2">
-        {posts.map((post) => (
-          <a class="blog-card" href={post.href}>
-            <p class="card-label">{post.label}</p>
-            <h3>{post.title}</h3>
-            <p>{post.description}</p>
-            <span class="card-link">Read Article →</span>
-          </a>
-        ))}
+        <p class="lead hero-lead">
+          Explore clear, practical articles about websites, automation, AI,
+          internal software, and the systems small and medium businesses use
+          every day.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="image-feature">
-  <div class="container image-feature-grid">
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Latest articles.</h2>
 
-    <div class="image-feature-content">
-      <p class="eyebrow">Website Education</p>
+          <p class="lead">
+            Our existing articles currently focus on website development.
+            Future articles will also cover workflow automation, practical AI,
+            internal software, and business operations.
+          </p>
+        </div>
 
-      <h2>
-        Better websites start with better decisions.
-      </h2>
+        <div class="grid-2">
+          {
+            posts.map((post) => (
+              <article class="blog-card">
+                <p class="blog-category">{post.category}</p>
 
-      <p>
-        Most small businesses spend more time comparing platforms than
-        understanding what actually makes a website successful.
-      </p>
+                <h2>{post.title}</h2>
 
-      <p>
-        Our articles focus on ownership, performance, security,
-        maintenance, and practical web strategy for business owners.
-      </p>
-    </div>
+                <p>{post.description}</p>
 
-    <div class="image-feature-image">
-      <img
-        src="/images/website-strategy-notebook.jpg"
-        alt="Website planning notebook used for business website strategy"
-      />
-    </div>
+                <a
+                  class="text-link"
+                  href={post.href}
+                  aria-label={`Read ${post.title}`}
+                >
+                  Read Article →
+                </a>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
 
-  </div>
-</section>
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Have a business system that needs improvement?</h2>
 
-  <CTA
-    eyebrow="Build With Clarity"
-    title="Need a simpler website foundation?"
-    text="Static Pulse Sites builds custom-coded websites for businesses that value speed, security, and ownership."
-    buttonText="View Services"
-    buttonHref="/services"
-  />
+          <p class="lead">
+            Tell us about the website, workflow, or internal process you want
+            to make simpler and more effective.
+          </p>
+
+          <div class="button-row">
+            <a class="btn btn-primary" href="/contact">
+              Start Your Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

@@ -3,149 +3,172 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Contact Static Pulse Sites | Start Your Website Project"
-  description="Contact Static Pulse Sites to request a custom-coded static website for your small or medium business."
+  title="Start Your Project | Static Pulse Sites"
+  description="Contact Static Pulse Sites about website development, AI systems and automation, or custom internal software for your business."
 >
-  <section class="contact-page">
-    <div class="container contact-layout">
-      <div class="contact-intro">
-        <p class="eyebrow">Contact // Start Your Project</p>
-        <h1>Tell us what kind of website your business needs</h1>
+  <main>
+    <section class="contact-page">
+      <div class="container contact-layout">
+        <div class="contact-intro">
+          <h1>Tell us what you want your business to do more efficiently.</h1>
 
-        <p class="contact-lead">
-          Share a few details about your business, your goals, and the kind of support you're looking for. We’ll review your request and reply with recommended next steps.
-        </p>
+          <p class="contact-lead">
+            You do not need to know which service, platform, or technology you
+            need. Start by explaining the current problem, the tools involved,
+            and the result you want.
+          </p>
 
-        <div class="contact-points">
-          <div>
-            <p class="card-label">Secure by Design</p>
-            <p>Fewer moving parts. Clean, modern architecture.</p>
+          <div class="contact-points">
+            <div>
+              <p class="card-label">Business First</p>
+              <p>We begin with the problem, not the technology.</p>
+            </div>
+
+            <div>
+              <p class="card-label">Human Guidance</p>
+              <p>You will work with a real person throughout the project.</p>
+            </div>
+
+            <div>
+              <p class="card-label">Clear Ownership</p>
+              <p>Your business retains ownership of its systems and data.</p>
+            </div>
           </div>
 
-          <div>
-            <p class="card-label">Fast Performance</p>
-            <p>Static websites built for speed, clarity, and SEO.</p>
-          </div>
-
-          <div>
-            <p class="card-label">You Own Your Site</p>
-            <p>Your code, your content, your hosting, your asset.</p>
+          <div class="contact-help">
+            <p class="card-label">What happens next?</p>
+            <p>
+              We review your request and respond by email with questions,
+              recommendations, or the appropriate next step.
+            </p>
           </div>
         </div>
 
-        <div class="contact-help">
-          <p class="card-label">Not sure which package fits?</p>
-          <p>That’s okay. We’ll help you figure it out.</p>
+        <div class="contact-form-card">
+          <div class="contact-form-heading">
+            <h2>Start your project.</h2>
+
+            <p>
+              Share enough information for us to understand the business
+              problem. You can keep the first message simple.
+            </p>
+          </div>
+
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/xnjyojrv"
+            method="POST"
+          >
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name *</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your full name"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email *</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="you@email.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="company">Company *</label>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  placeholder="Your company"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="website">Current Website</label>
+                <input
+                  id="website"
+                  name="website"
+                  type="url"
+                  placeholder="https://yourwebsite.com"
+                />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="service">Service Interested In</label>
+
+              <select id="service" name="service">
+                <option value="">Select an option</option>
+                <option value="Website Development">
+                  Website Development
+                </option>
+                <option value="AI Systems and Automation">
+                  AI Systems &amp; Automation
+                </option>
+                <option value="Custom Internal Software">
+                  Custom Internal Software
+                </option>
+                <option value="Combination of Services">
+                  Combination of Services
+                </option>
+                <option value="Not Sure Yet">
+                  Not Sure Yet
+                </option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="current-tools">Current Tools</label>
+
+              <input
+                id="current-tools"
+                name="current-tools"
+                type="text"
+                placeholder="Examples: Gmail, Asana, HubSpot, spreadsheets"
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="message">What would you like to improve? *</label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="8"
+                placeholder="Describe the current problem, process, or system and what you want to improve."
+                required
+              ></textarea>
+            </div>
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Static Pulse Sites project inquiry"
+            />
+
+            <button class="btn btn-primary contact-submit" type="submit">
+              Send Project Request →
+            </button>
+
+            <p class="privacy-note">
+              Your information will only be used to review and respond to your
+              enquiry.
+            </p>
+          </form>
         </div>
       </div>
-
-      <div class="contact-form-card">
-        <div class="contact-form-heading">
-          <p class="card-label">What Happens Next</p>
-          <h2>We’ll review your request first</h2>
-          <p>
-            If your project fits, we’ll reply with recommended next steps.
-          </p>
-        </div>
-
-        <form
-          class="contact-form"
-          action="https://formspree.io/f/xnjyojrv"
-          method="POST"
-        >
-          <div class="form-row">
-            <div class="form-field">
-              <label for="name">Name *</label>
-              <input id="name" name="name" type="text" placeholder="Your full name" required />
-            </div>
-
-            <div class="form-field">
-              <label for="email">Email *</label>
-              <input id="email" name="email" type="email" placeholder="you@email.com" required />
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-field">
-              <label for="company">Company</label>
-              <input id="company" name="company" type="text" placeholder="Your company" />
-            </div>
-
-            <div class="form-field">
-              <label for="industry">Industry</label>
-              <input id="industry" name="industry" type="text" placeholder="Your industry" />
-            </div>
-          </div>
-
-          <div class="form-field">
-            <label for="package">Package Interested In</label>
-            <select id="package" name="package">
-              <option value="">Select an option</option>
-              <option value="The Core Build">The Core Build</option>
-              <option value="Build + Basic Design">Build + Basic Design</option>
-              <option value="Build + Approachable SEO">Build + Approachable SEO</option>
-              <option value="Hardened Maintenance">Hardened Maintenance</option>
-              <option value="Not sure yet">Not sure yet</option>
-            </select>
-          </div>
-
-          <div class="form-field">
-            <label for="message">Message *</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="7"
-              placeholder="Tell us about your project, your goals, and anything else that helps."
-              required
-            ></textarea>
-          </div>
-
-          <input type="hidden" name="_subject" value="New Static Pulse Sites inquiry" />
-
-          <input type="hidden" name="_next" value="https://staticpulsesites.com/thank-you"/>
-
-          <button class="btn btn-primary contact-submit" type="submit">
-            Send Project Request →
-          </button>
-
-          <p class="privacy-note">
-            Your information is safe. We’ll never share it.
-          </p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-<section class="image-feature">
-  <div class="container image-feature-grid">
-
-    <div class="image-feature-content">
-      <p class="eyebrow">Let's Build Something Better</p>
-
-      <h2>
-        Every project starts with a conversation.
-      </h2>
-
-      <p>
-        Whether you're replacing an aging website or launching a new
-        business, we begin by understanding your goals before
-        recommending a solution.
-      </p>
-
-      <p>
-        No pressure. No confusing technical language.
-        Just a practical discussion about what your business actually needs.
-      </p>
-    </div>
-
-    <div class="image-feature-image">
-      <img
-        src="/images/modern-business-website-office.jpg"
-        alt="Modern office workspace used for professional website planning"
-      />
-    </div>
-
-  </div>
-</section>
-
+    </section>
+  </main>
 </Layout>

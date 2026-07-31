@@ -1,106 +1,156 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import CTA from '../../components/CTA.astro';
 ---
 
 <Layout
-  title="WordPress Security Vulnerabilities for Small Business | Static Pulse Sites"
-  description="Why WordPress security vulnerabilities matter for law firms, clinics, consultants, and small businesses, and how static websites reduce common attack surfaces."
+  title="WordPress Security Risks for Small Businesses | Static Pulse Sites"
+  description="Understand how plugins, databases, login portals, and ongoing maintenance affect WordPress security for small businesses."
 >
-  <article class="section blog-article">
-    <div class="container article-container">
-      <p class="eyebrow">Security // WordPress Alternatives</p>
+  <main>
+    <article class="section blog-article">
+      <div class="container article-container">
+        <h1>When WordPress complexity becomes a security and maintenance problem.</h1>
 
-      <h1>Why WordPress Can Become a Security Liability for Law Firms and Medical Practices</h1>
-
-      <p class="lead hero-lead">
-        For modern service professionals, your website is your digital storefront. If you are a solo attorney, run a boutique consulting firm, or manage a local medical clinic, a web outage or security breach can damage years of client trust.
-      </p>
-
-      <p>
-        Many businesses continue to build their online presence on plugin-heavy content management systems without fully understanding the long-term maintenance responsibility. If your current platform feels sluggish or you are constantly stressing over updates, understanding the WordPress security vulnerabilities small business owners face is an important first step.
-      </p>
-
-      <h2>The underlying vulnerability: how CMS databases invite risk</h2>
-
-      <p>
-        Traditional content management systems often rely on dynamic architecture. This means the website uses a database, admin dashboard, themes, plugins, and server-side processes to assemble pages for visitors.
-      </p>
-
-      <p>
-        That flexibility can be useful, but it also creates more moving parts. Every plugin, theme, login screen, form, and database connection becomes something that must be maintained, updated, and protected.
-      </p>
-
-      <h3>1. Outdated or insecure plugins</h3>
-
-      <p>
-        Many dynamic websites rely on third-party plugins for basic features such as contact forms, SEO settings, galleries, analytics, or page layouts. If a plugin is abandoned, poorly maintained, or not updated quickly after a vulnerability is discovered, the website can become exposed.
-      </p>
-
-      <h3>2. Login gateways</h3>
-
-      <p>
-        CMS websites often include a standard login area for administrators. Automated bots can scan the web looking for those entry points and attempt repeated login attacks. Strong passwords and security tools help, but the login surface still exists.
-      </p>
-
-      <h3>3. Database and form attacks</h3>
-
-      <p>
-        Dynamic websites that connect forms, plugins, and databases require careful handling. Poorly configured systems may create opportunities for spam injections, malicious redirects, or other unwanted behavior.
-      </p>
-
-      <h2>The static alternative: fewer moving parts</h2>
-
-      <p>
-        A static website removes many of the moving parts that typical small business websites do not actually need. Instead of relying on a live database and plugin dashboard to display regular pages, the site is compiled into finished files before visitors arrive.
-      </p>
-
-      <p>
-        With frameworks like Astro, a business website can be built as clean, fast, static files that are delivered through modern hosting and content delivery networks. This does not make a website magically invincible, but it does reduce many common attack surfaces associated with plugin-heavy systems.
-      </p>
-
-      <h2>Why static code can be stronger for security-focused businesses</h2>
-
-      <ul>
-        <li><strong>No plugin dependency:</strong> Essential layouts, navigation, and page structure are built directly into the codebase instead of relying on a chain of plugins.</li>
-        <li><strong>No live CMS dashboard for regular pages:</strong> Without a standard admin dashboard powering the public site, there are fewer common targets for automated bots.</li>
-        <li><strong>No database required for informational pages:</strong> Many small business websites only need static pages, service descriptions, and a contact path.</li>
-        <li><strong>Cleaner ownership:</strong> Website files can live in a repository the business controls, instead of being trapped inside a proprietary or plugin-dependent system.</li>
-      </ul>
-
-      <h2>The business value: speed, trust, and maintenance simplicity</h2>
-
-      <p>
-        Choosing a secure alternative to WordPress is not only about security. It can also support faster page loading, cleaner technical SEO foundations, and a more reliable visitor experience.
-      </p>
-
-      <p>
-        For law firms, clinics, consultants, and professional service businesses, the website does not need to be complicated to be effective. It needs to be fast, clear, trustworthy, and easy to maintain.
-      </p>
-
-      <p>
-        Static Pulse Sites builds custom-coded websites for businesses that want fewer unnecessary dependencies, stronger ownership, and a cleaner long-term web foundation.
-      </p>
-
-      <div class="article-cta">
-        <p class="card-label">Next Step</p>
-        <h3>Ready to replace plugin dependency with a cleaner website foundation?</h3>
-        <p>
-          Explore our service packages or contact Static Pulse Sites to discuss a custom-coded static website for your business.
+        <p class="lead hero-lead">
+          WordPress can support many kinds of websites, but its flexibility
+          often depends on themes, plugins, databases, login portals, and
+          regular maintenance. For businesses that only need a focused
+          informational website, that complexity may create more responsibility
+          than value.
         </p>
-        <div class="button-row">
-          <a class="btn btn-primary" href="/services">View Services</a>
-          <a class="btn btn-secondary" href="/contact">Contact Us</a>
+
+        <p>
+          The question is not whether WordPress is always secure or insecure.
+          The more useful question is whether its architecture is appropriate
+          for the website your business actually needs.
+        </p>
+
+        <h2>Why additional components create additional responsibility</h2>
+
+        <p>
+          A typical WordPress website may rely on a theme, several plugins, a
+          database, an administrative dashboard, hosting configuration, and
+          third-party integrations. Each component must remain compatible,
+          properly configured, and updated.
+        </p>
+
+        <p>
+          This flexibility can be valuable for websites with advanced
+          publishing requirements or dynamic features. However, many service
+          businesses only need clear pages, reliable forms, analytics, and
+          connections to the systems used behind the website.
+        </p>
+
+        <h2>Common sources of risk and maintenance</h2>
+
+        <h3>Outdated plugins</h3>
+
+        <p>
+          Plugins add features without requiring every function to be developed
+          from scratch. The tradeoff is that each plugin introduces another
+          dependency. A plugin may become outdated, incompatible, abandoned, or
+          affected by a newly discovered vulnerability.
+        </p>
+
+        <h3>Administrative login portals</h3>
+
+        <p>
+          Content-management systems require login areas so authorized users
+          can edit the website. These access points need strong passwords,
+          appropriate permissions, secure authentication, and monitoring.
+        </p>
+
+        <h3>Database-driven architecture</h3>
+
+        <p>
+          WordPress stores content and configuration in a database. This allows
+          pages to be created dynamically, but it also introduces additional
+          infrastructure that must be protected, backed up, and maintained.
+        </p>
+
+        <h3>Update and compatibility requirements</h3>
+
+        <p>
+          Core software, themes, plugins, hosting environments, and other
+          components may all change over time. Updates are important, but they
+          can occasionally create compatibility problems that require testing
+          and troubleshooting.
+        </p>
+
+        <h2>When a static website may be the simpler option</h2>
+
+        <p>
+          A static website is built into finished files before visitors open
+          the page. It does not require a live content-management database to
+          assemble ordinary pages during every visit.
+        </p>
+
+        <p>
+          This approach can be suitable for businesses that need a website to:
+        </p>
+
+        <ul>
+          <li>Explain their services clearly.</li>
+          <li>Build trust with potential customers.</li>
+          <li>Collect enquiries through reliable forms.</li>
+          <li>Connect visitors with booking or external business tools.</li>
+          <li>Provide fast performance across desktop and mobile devices.</li>
+          <li>Require only occasional content updates.</li>
+        </ul>
+
+        <p>
+          Static architecture does not make a website completely immune to
+          security problems. Domains, hosting accounts, forms, third-party
+          scripts, access credentials, and external integrations still require
+          appropriate protection. Its advantage is that it can reduce some of
+          the moving parts associated with a plugin-heavy content-management
+          system.
+        </p>
+
+        <h2>The website should connect with the rest of the business</h2>
+
+        <p>
+          Website architecture is only one part of the decision. The website
+          should also support the systems behind the business.
+        </p>
+
+        <p>
+          An enquiry form may need to create a lead record, notify the correct
+          employee, generate a task, send a confirmation, or begin an onboarding
+          workflow. These connections should be planned around the business
+          process instead of added as unrelated plugins.
+        </p>
+
+        <h2>Choose the simplest architecture that meets the requirement</h2>
+
+        <p>
+          WordPress remains appropriate for many websites. Static development
+          is appropriate for others. The right choice depends on publishing
+          needs, editing frequency, required functionality, integrations,
+          internal resources, and long-term maintenance expectations.
+        </p>
+
+        <p>
+          Static Pulse Sites builds websites as part of a broader business
+          system. We begin with what the website must accomplish and recommend
+          the simplest practical architecture that supports that outcome.
+        </p>
+
+        <div class="article-cta">
+          <h2>Is your current website creating unnecessary maintenance?</h2>
+
+          <p>
+            Tell us what the website needs to accomplish, what is currently
+            causing problems, and which business tools it should connect with.
+          </p>
+
+          <div class="button-row">
+            <a class="btn btn-primary" href="/contact">
+              Start Your Project
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </article>
-
-  <CTA
-    eyebrow="Website Security"
-    title="Need a safer, simpler website foundation?"
-    text="Build a custom-coded website with fewer moving parts and clearer ownership."
-    buttonText="Start Your Project"
-    buttonHref="/contact"
-  />
+    </article>
+  </main>
 </Layout>
